@@ -45,5 +45,3 @@ and not the regex, use fgrep (or grep -F)
 ``fgrep "foobar" file.txt``</p>
 
 
-W
-
