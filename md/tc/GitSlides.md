@@ -258,6 +258,7 @@ Some different changes
 There are a various ways to handle a merge conflict.  The easiest one, however, is to use `git mergetool` and use a tool to handle it.  This is hard to describe doing because each machine might use a different tool.  So, suggested tips for merge conflicts are the following:
 
 -
+##Suggested Tips for Merge Conflicts:
 <p class="fragment fade-up">1. Commit early and commit often.  Your merge conflicts won't be all the large if you're constantly making small changes.</p>
 <p class="fragment fade-up">2. Try and not work on the same files as other people.</p>
 <p class="fragment fade-up">3. Be calm and Google things.  That's how most of us figured out how to fix merge conflicts.</p>
