@@ -32,9 +32,9 @@ A commit is a change to the repository.  For every commit made, you have a recor
 ##Git Commands
 -
 * `git init`
-    <span class="fragment fade-up">* Creates a new local repository in the current directory.</span>
-    * This command will rarely be used during this course as most work being done will be collaborative and pre-existing assignments.
-    * If you find yourself typing this command regularly, you're probably doing something wrong.
+    * <span class="fragment fade-up">Creates a new local repository in the current directory.</span>
+    * <span class="fragment fade-up">This command will rarely be used during this course as most work being done will be collaborative and pre-existing assignments.</span>
+    * <span class="fragment fade-up">If you find yourself typing this command regularly, you're probably doing something wrong.</span>
 
 -
 * `git clone {project}`
@@ -116,7 +116,7 @@ nothing to commit, working directory clean
 * They have most of the functionality built out, but they need you to implement the division function of the calculator.
 * So, you have some directory called `dev` where you do all your development work.
 * Your first step is:
-    * `git clone https://github.com/Zipcoder/Calcul8r.git`
+    * `git clone https://git.zipcode.rocks/ZipCodeWilmington/CR-Calcul8r.git`
 
 
 
@@ -290,10 +290,8 @@ https://www.github.com
 https://github.com/zipcoder/calcul8r
 
 -
-##Open the project in Eclipse
-* Set your workspace to the git directory
+##Open the project in BlueJ
 * Open the project from the file system
-* Let maven work its magic
 * Show the dotfiles
 
 -
