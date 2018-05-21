@@ -32,7 +32,7 @@ A commit is a change to the repository.  For every commit made, you have a recor
 ##Git Commands
 -
 * `git init`
-    * Creates a new local repository in the current directory.
+    * <span class="fragment fade-up">Creates a new local repository in the current directory.</span>
     * This command will rarely be used during this course as most work being done will be collaborative and pre-existing assignments.
     * If you find yourself typing this command regularly, you're probably doing something wrong.
 
