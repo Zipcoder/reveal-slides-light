@@ -4,7 +4,7 @@
 
 -
 -
-# Useful Commands
+## Useful Commands
 <p class="fragment fade-up">**w** -</p>
 <p class="fragment fade-up">**pwd** - "Print Working Directory" prints out your current location (known as your current working directory or 'cwd')</p>
 <p class="fragment fade-up">**ls** - lists contents of the cwd</p>
@@ -15,7 +15,7 @@
 
 -
 -
-# Useful Commands (contin.)
+## Useful Commands (contin.)
 <p class="fragment fade-up">**less/more** - Display contents of a file one page at a time ...just remember that less is more (more or less) and you'll be fine.</p>
 <p class="fragment fade-up">**grep** - search for the specified text or pattern</p>
 <p class="fragment fade-up">**touch**</p>
@@ -27,7 +27,7 @@
 
 -
 -
-# Other commands worth knowing
+## Other commands worth knowing
 <p class="fragment fade-up">**head** - display the first lines of a file</p>
 <p class="fragment fade-up">**tail** - display the last lines of a file</p>
 
