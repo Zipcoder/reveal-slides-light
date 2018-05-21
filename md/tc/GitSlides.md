@@ -287,7 +287,7 @@ https://www.github.com
 
 -
 ##Fork this repo
-https://github.com/zipcoder/calcul8r
+https://git.zipcode.rocks/ZipCodeWilmington/CR-Calcul8r.git
 
 -
 ##Open the project in BlueJ
