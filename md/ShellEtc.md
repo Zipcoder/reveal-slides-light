@@ -42,3 +42,6 @@ and not the regex, use fgrep (or grep -F)
 ``fgrep "foobar" file.txt``</p>
 
 
+-
+-
+<img src="/reveal-slides-light/img/bunnies/cute-bunnies-tongues-3.jpg" >
