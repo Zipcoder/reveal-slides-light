@@ -1,4 +1,4 @@
-#Lecture Template
+#Shell, etc.
 
 
 
@@ -11,6 +11,8 @@
 <p class="fragment fade-up">**cd** - change directory. This is how you move around the file system. You can specify the destination as an absolute or relative path.</p>
 <p class="fragment fade-up">**echo** - prints text to the terminal</p>
 <p class="fragment fade-up">**cat** - concatenates zero or more files. Often used to print the contents of a file to the terminal. Often misused</p>
+
+
 _
 _
 #Useful Commands (contin.)
