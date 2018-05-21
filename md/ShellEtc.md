@@ -32,15 +32,16 @@
 <p class="fragment fade-up">**tail** - display the last lines of a file</p>
 
 <p class="fragment fade-up">
-###more grep:
+**more grep:**
+***
 ``grep "^foo.#bar$" file.txt | grep -v "baz"``
-___
+***
 (same  search as grep, but filter out the lines containing "baz")
-</p>
-<p class="fragment fade-up">
+***
+***
 if you literally want to search for the string,
 and not the regex, use fgrep (or grep -F)
-___
+***
 ``fgrep "foobar" file.txt``</p>
 
 
