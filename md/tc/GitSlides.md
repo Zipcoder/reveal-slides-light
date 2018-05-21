@@ -232,6 +232,9 @@ Next, you run `git branch -a` to see exactly what branches exist on this compani
 * When you checkout master, the file you changed was in state A.
 * When Matt decided to make the change, his version was also in state A.
 * When Matt pushes his changes to master, the branch was in state
+
+-
+
 * You make your changes on your branch, but before you can merge it into your up-to-date version of master, Matt pushed his change.
 * This means that the file is now in state B, and you're trying to put it in state B. You can't.
 * Plus, considering that keep keeps a running log of the state of a file, you now need to make your changes as if they came after Matt's change (since it keeps the order).
