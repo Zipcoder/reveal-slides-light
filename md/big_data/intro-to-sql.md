@@ -587,6 +587,11 @@ The Join clause will have two parts
 - The table to join to
 - The fields to compare
 
+
+
+-
+<img src="/img/SQL-Joins_Wall-Skills.png">
+
 -
 
 ### Joins - One to One
