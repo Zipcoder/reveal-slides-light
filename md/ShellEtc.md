@@ -16,7 +16,7 @@
 -
 -
 ## Useful Commands (contin.)
-<p class="fragment fade-up">**less/more** - display contents of a file one page at a time ...just remember that less is more (more or less) and you'll be fine.</p>
+<p class="fragment fade-up">**less/more** - display contents of a file one page at a time</p>
 <p class="fragment fade-up">**grep** - search for the specified text or pattern</p>
 <p class="fragment fade-up">**touch** - create or open a file and save it without changing its contents. </p>
 <p class="fragment fade-up">**mkdir** - make a directory</p>
