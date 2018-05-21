@@ -6,7 +6,6 @@
 -
 #First Slide
 
-[4em](https://www.w3schools.com/CSSref/css_units.asp) [checksum](https://en.wikipedia.org/wiki/Checksum) [Clojure](https://clojure.org/) [gwt](http://www.gwtproject.org/) [emmet](http://emmet.io/)
 _
 
 
@@ -19,11 +18,20 @@ _
 <p class="fragment fade-up">less/more - Display contents of a file one page at a time ...just remember that less is more (more or less) and you'll be fine.</p>
 <p class="fragment fade-up">grep - search for the specified text or pattern</p>
 
-Other commands worth knowing
+```
+touch
+mkdir
+rmdir
+rm
+cp
+mv
+<,>,>>,|
+
+
+```
+#Other commands worth knowing
 <p class="fragment fade-up">head - display the first lines of a file</p>
 <p class="fragment fade-up">tail - display the last lines of a file</p>
-
-
 
 # perform the same initial search, but filter out the lines containing "baz"
 grep "^foo.*bar$" file.txt | grep -v "baz"
