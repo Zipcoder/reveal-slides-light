@@ -268,9 +268,11 @@ There are a various ways to handle a merge conflict.  The easiest one, however, 
 ## Pull Requests
 
 -
-Since many repositories are protected, you'll need to submit a PR (pull request) to get your changes merged into them.  Think of them as merges that someone has to approve. 
+Since many repositories are protected, you'll need to submit a *PR* (pull request) to get your changes merged into them.  Think of it a a merge that someone has to approve. 
 
-To submit from a fork (your personal copy of a repo that you can make changed to), go to your git provider ( such as Github, Bitbucket, or a proprietary git server) and submit a PR from its interface. My advice is to get your master branch to where you want it, merge in the original project's changes, and then submit the pull request. 
+To submit from a *fork* (your personal copy of a repo that you can make changed to), go to your git provider (such as Github, Bitbucket, or a proprietary git server) and submit a *PR* from its interface.
+
+A good practice is to get your *master* branch to your desired state, merge in the original project's changes, then submit your pull request. 
 
 -
 
