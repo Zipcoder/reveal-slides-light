@@ -32,9 +32,9 @@ A commit is a change to the repository.  For every commit made, you have a recor
 ##Git Commands
 -
 * `git init`
-    * Creates a new local repository in the current directory.
-    * This command will rarely be used during this course as most work being done will be collaborative and pre-existing assignments.
-    * If you find yourself typing this command regularly, you're probably doing something wrong.
+    * <span class="fragment fade-up">Creates a new local repository in the current directory.</span>
+    * <span class="fragment fade-up">This command will rarely be used during this course as most work being done will be collaborative and pre-existing assignments.</span>
+    * <span class="fragment fade-up">If you find yourself typing this command regularly, you're probably doing something wrong.</span>
 
 -
 * `git clone {project}`
@@ -116,7 +116,7 @@ nothing to commit, working directory clean
 * They have most of the functionality built out, but they need you to implement the division function of the calculator.
 * So, you have some directory called `dev` where you do all your development work.
 * Your first step is:
-    * `git clone https://github.com/Zipcoder/Calcul8r.git`
+    * `git clone https://git.zipcode.rocks/ZipCodeWilmington/CR-Calcul8r.git`
 
 
 
@@ -232,6 +232,9 @@ Next, you run `git branch -a` to see exactly what branches exist on this compani
 * When you checkout master, the file you changed was in state A.
 * When Matt decided to make the change, his version was also in state A.
 * When Matt pushes his changes to master, the branch was in state
+
+-
+
 * You make your changes on your branch, but before you can merge it into your up-to-date version of master, Matt pushed his change.
 * This means that the file is now in state B, and you're trying to put it in state B. You can't.
 * Plus, considering that keep keeps a running log of the state of a file, you now need to make your changes as if they came after Matt's change (since it keeps the order).
@@ -255,6 +258,7 @@ Some different changes
 There are a various ways to handle a merge conflict.  The easiest one, however, is to use `git mergetool` and use a tool to handle it.  This is hard to describe doing because each machine might use a different tool.  So, suggested tips for merge conflicts are the following:
 
 -
+##Suggested Tips for Merge Conflicts:
 <p class="fragment fade-up">1. Commit early and commit often.  Your merge conflicts won't be all the large if you're constantly making small changes.</p>
 <p class="fragment fade-up">2. Try and not work on the same files as other people.</p>
 <p class="fragment fade-up">3. Be calm and Google things.  That's how most of us figured out how to fix merge conflicts.</p>
@@ -264,7 +268,13 @@ There are a various ways to handle a merge conflict.  The easiest one, however, 
 ## Pull Requests
 
 -
-Since a lot of repositories are protected, to get your changes done in master you must submit a PR (pull request).  Think of these are merges that someone has to approve.  To do them from a fork (or your personal copy of a repo that you can do work on), go to your git provider (Github, Gitlab, or a proprietary git server) and submit a PR.  My adivce is to get your master branch to where you want it, merge in the original project's changes, and then submit the pull request.  Each place will be a little different with pull requests, so follow the directions that apply to you.  But, remember, they're basically just protected merges so treat them the way you treat merges.
+Since many repositories are protected, you'll need to submit a PR (pull request) to get your changes merged into them.  Think of them as merges that someone has to approve. 
+
+To submit from a fork (your personal copy of a repo that you can make changed to), go to your git provider ( such as Github, Bitbucket, or a proprietary git server) and submit a PR from its interface. My advice is to get your master branch to where you want it, merge in the original project's changes, and then submit the pull request. 
+
+-
+
+Each provider handles pull requests differently, so follow the directions that apply to you. However, remember they're basically protected merges, so treat them as you'd treat merges.
 
 -
 -
@@ -287,13 +297,11 @@ https://www.github.com
 
 -
 ##Fork this repo
-https://github.com/zipcoder/calcul8r
+https://git.zipcode.rocks/ZipCodeWilmington/CR-Calcul8r.git
 
 -
-##Open the project in Eclipse
-* Set your workspace to the git directory
+##Open the project in BlueJ
 * Open the project from the file system
-* Let maven work its magic
 * Show the dotfiles
 
 -
