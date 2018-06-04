@@ -41,7 +41,7 @@ abstract class Worker{
 * Suppress details
 * Simplify Interactions
 
-#### Improves maintenance
+**Improves maintenance**
 
 -
 ### Abstraction for Humans
@@ -62,5 +62,5 @@ Split complex operations into sumpler methods
 **Class Abstraction**<br>
 Delegate responsibility to other classes
 
-**Polymorphism**
+**Polymorphism**<br>
 Abstraction layer can have different implementations
