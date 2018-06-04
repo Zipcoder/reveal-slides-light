@@ -590,7 +590,7 @@ The Join clause will have two parts
 
 
 -
-<img src="/img/SQL-Joins_Wall-Skills.png">
+<img src="./img/SQL-Joins_Wall-Skills.png">
 
 -
 
