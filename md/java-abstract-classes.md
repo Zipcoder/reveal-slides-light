@@ -54,7 +54,7 @@ Simplify each layer down to the minimum viable concepts
 **Abstractions Compose**<br>
 Structure so that abstractions depend upon lower layers
 
-_
+-
 ### Some types of Abstraction
 **Structured Abstaction**<br>
 Split complex operations into sumpler methods
