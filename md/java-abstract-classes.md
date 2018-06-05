@@ -33,3 +33,34 @@ abstract class Worker{
 - Abstract classes have state and private fields and methods available
 - Concrete classes extend abstract classes; they implement interfaces (syntax difference)
 - Abstract classes can implement interfaces; the reverse is not allowed
+
+-
+### The need for Abstraction
+#### Abstractions
+* Way to arrange code
+* Suppress details
+* Simplify Interactions
+
+**Improves maintenance**
+
+-
+### Abstraction for Humans
+**People Need Focus**<br>
+Short term memory only holds 5-7 facts
+
+**Readablilty Matters**<br>
+Simplify each layer down to the minimum viable concepts
+
+**Abstractions Compose**<br>
+Structure so that abstractions depend upon lower layers
+
+-
+### Some types of Abstraction
+**Structured Abstaction**<br>
+Split complex operations into sumpler methods
+
+**Class Abstraction**<br>
+Delegate responsibility to other classes
+
+**Polymorphism**<br>
+Abstraction layer can have different implementations
