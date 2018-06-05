@@ -535,13 +535,13 @@ WHERE specialty='FRONT END';
 
 ### Limit and Order Clauses
 
-This will return a single row with the teacher John Smith who is our only FRONT END specialist. You tell the higher ups that you think John would be up to the task. They say great, but ask who can take over that teacher's spot. We'll wanna choose the teacher with the most experience, who isn't John. 
+This will return a single row with the teacher John Smith, who is our only FRONT END specialist. You tell the higher-ups that you think John would be up to the task. They say great, but ask who can take over that teacher's spot. We'll want to choose the teacher with the most experience, who isn't John. 
 
 -
 
 ### Limit and Order Clauses
 
-We check and see that John's id is 1, so we'll keep that in mind. Next we think of how we can find the teacher with the highest years of experience. to do this, we may use an `ORDER BY` statement. This kind of statement will take a list of fields that we will sort a table on and the direction we want to sort them. The two directions are `ASC` and `DESC`
+We check and see that John's id is 1, so we'll keep that in mind. Next, we think of how we can find the teacher with the most years of experience. To do this, we may use an `ORDER BY` clause. This kind of clause will specify a list of fields by which we will sort a table, and the direction we want to sort them. The two directions are `ASC` and `DESC`.
 
 -
 
@@ -553,7 +553,7 @@ WHERE teacher_id != 1
 ORDER BY years DESC;
 ```
 
-We specify DESC here so that the table will be ordered by highest years to lowest years. This works but we do want to just find the one top teacher id. To do this we can use a `LIMIT`. The Limit clause will take the number of items you want to reutrn
+We specify DESC here so that the table will be ordered by years from highest to lowest. This works, but we only want to find one top teacher id. To do this, we can use a `LIMIT`. The Limit clause will take the number of items you want to return.
 
 -
 
@@ -569,7 +569,7 @@ LIMIT 1;
 |:----------:|
 | 3          |
 
-Select from the teachers table where id is 3 and find that Jane is the best person to take the extra classes on.
+Select from the teachers table where id is 3 and find that Jane is the best person to take on the extra classes.
 
 -
 -
@@ -580,7 +580,7 @@ Select from the teachers table where id is 3 and find that Jane is the best pers
 
 ### Joins
 
-Viewing the data in one table can be useful, but often we'll want to see mutiple tables' data together. To do this we use a `JOIN`.
+Viewing the data in one table can be useful, but often we'll want to see multiple tables' data together. To do this we use a `JOIN`.
 
 The Join clause will have two parts
 
@@ -614,7 +614,7 @@ JOIN zipcode.teacher_meta tm
 
 ### Joins - One to Many
 
-Next lets add a join to see which teachers wrote each assignment. This time, since some teachers may have written more than one assignment, we may see some duplication in the results.
+Next, let's add a join to see which teachers wrote each assignment. This time, since some teachers may have written more than one assignment, we may see some duplication in the results.
 
 -
 
@@ -636,7 +636,7 @@ JOIN zipcode.assignments a
 
 ### Joins - Many to Many
 
-Lastly lets see which assignments have been given to each student.
+Lastly, let's see which assignments have been given to each student.
 
 For this relationship we must first join the pivot table, then join the destination table. 
 
@@ -749,7 +749,7 @@ Sometimes you want to take an aggregate of rows but you don't want to indiscrimi
 
 Right now in order to do that you could try using a `WHERE` clause, but you'd have to know some information about the rows beforehand. Instead we may group a column with a Group By.
 
-Lets write a query to list teachers who have equivilent experience together.
+Let's write a query to list teachers who have equivilent experience together.
 
 -
 
