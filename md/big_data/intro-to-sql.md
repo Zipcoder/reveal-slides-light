@@ -30,13 +30,13 @@ What makes a database relational though?
 A database index is a data structure that improves the speed of data retrieval operations on a database table at the cost of additional writes and storage space to maintain the index data structure
 "
 
-Basically, you put a sepcial tag on a piece of data so that you can find it faster. This requires extra work and takes more space on disk, but will help speed up your databse.
+Basically, you put a special tag on a piece of data so that you can find it faster. This requires extra work and takes more space on disk, but will help speed up your database.
 
 -
 
 ### Indexing
 
-Most sql data sets will have columns based on the fields of an item and rows for each of the individaul items. When written out it sort of looks like an excel spreadsheet.
+Most SQL data sets will have columns based on the fields of an item and rows for each of the individual items. When written out, it resembles a spreadsheet.
 
 | First Name | Last Name | Age | Gender |
 |:-----------|:----------|:----|:-------|
@@ -48,7 +48,7 @@ Most sql data sets will have columns based on the fields of an item and rows for
 
 ### Indexing
 
-Issue: Let us say we want to find out Leon's age. We might tell our databse to return all the info related to the row with the first name of Leon. For now that would work since we only have one Leon in the databse, but what if we hired another Leon? We could ask for only Leon Hunter, but we really cannot rely on this data always being unique. 
+Issue: Let us say we want to find out Leon's age. We might tell our database to return all the info related to the row with the first name of Leon. For now that would work since we only have one Leon in the database, but what if we hired another Leon? We could ask for only Leon Hunter, but we really can't rely on this data always being unique. 
 
 | First Name | Last Name | Age | Gender |
 |:-----------|:----------|:----|:-------|
@@ -67,13 +67,13 @@ Solution: Add a unique id to each row.
 | 2  | Wilhem.    | Alcivar   | 23  | NULL   |
 | 3  | Nhu.       | Nguyen    | NULL| Female |
 
-We can denote this id as the `PRIMARY KEY` which will make this an index. Searching for a row by its id will not only help us get only the data we want, but it will also be faster by a mesurable degree
+We can denote this id as the `PRIMARY KEY` which will make this an index. Searching for a row by its id will not only help us get only the data we want, but it will also be faster by a measurable degree
 
 -
 
 ### Indexing
 
-Lets say we keep a list of phone numbers now: 
+Let's say we keep a list of phone numbers now: 
 
 | ID | Phone Number | Phone Owner |
 |:---|:-------------|:------------|
@@ -87,7 +87,7 @@ Same issue as before. That owner there refers to only one person now, but how ca
 
 ### Indexing
 
-Solution: Use the person's unique id to identify who this number belongs to
+Solution: Use the person's unique id to identify who this number belongs to.
 
 | ID | Phone Number | Phone Owner ID |
 |:---|:-------------|:---------------|
@@ -95,7 +95,7 @@ Solution: Use the person's unique id to identify who this number belongs to
 | 2  | 555-221-4548 | 1              |
 | 3  | 555-782-4549 | 3              |
 
-To find out who owns the phone number we would take that id and search for it in the Person list that we made above. This is a relationship. Relational data uses these kinds of relationships
+To find out who owns the phone number, we take that id and search for it in the Person list that we made above. This is what we call a relationship. Relational data uses these kinds of relationships.
 
 -
 
@@ -118,13 +118,13 @@ Many to Many - One item in table A has many items in table B. One item in table 
 
 ### MySQL
 
-Mysql is a popular Relational Database Management System (RDBMS). It runs on most systems so it can be run directly on your own machine, but its best to run it on a docker instance running linux. 
+Mysql is a popular Relational Database Management System (RDBMS). It runs on most systems so it can be run directly on your own machine, but it's best to run it on a docker instance running Linux. 
 
 -
 
 ### MySQL
 
-In order to connect to a MySQL instance, you need to know a few things
+In order to connect to a MySQL instance, you need to know a few things:
 
 * Host - this is usually a url or ip address for a server
 * Port - Port listening for a connection. Defaults to 3306
@@ -155,7 +155,7 @@ Password: password
 
 ### MySQL
 
-Once you have connected, it is advised for security reasons that you create a new user. The current user is the root user which will always have all privledges and it is insecure to use it for general purposes. To make a new user and give them permissions to do anything (ergo an admin user) you may use the following SQL Script
+Once you have connected, it is advised for security reasons that you create a new user. The current user is the root user, which will always have all privledges and it is insecure to use it for general purposes. To make a new user and give them permissions to do anything (ergo an admin user) you may use the following SQL Script:
 
 ```
 GRANT ALL PRIVILEGES ON *.* TO 'new_user'@'localhost' IDENTIFIED BY 'password';
@@ -181,9 +181,9 @@ This will create a user with username `new_user` and password `password`. Note i
 
 ### Schemas and Tables
 
-Lets say we are designing a database for our backend developers. They are creating an app for teachers to keep track of their student's assignments. We'll also wanna keep meta data on the teachers. Their application has Students, Teachers, Labs, and Submissions. Let's try to go through designing this database
+Lets say we are designing a database for our backend developers. They are creating an app for teachers to keep track of their students' assignments. We'll also want to keep metadata on the teachers. Their application has Students, Teachers, Labs, and Submissions. Let's try to go through designing this database.
 
-First we'll need to make a schema. To do this we can run the following script
+First we'll need to make a schema. To do this we can run the following script:
 
 ```
 CREATE SCHEMA zipcode
@@ -195,7 +195,7 @@ CREATE SCHEMA zipcode
 What have we just done? _We created a SCHEMA_
 
 - Created a home for all data related to an application
-- Allowed ourselves to manage multiple applications in the same databse without worrying about collisions
+- Allowed ourselves to manage multiple applications in the same database without worrying about collisions
 
 -
 
@@ -213,13 +213,13 @@ CREATE TABLE zipcode.teachers
 CREATE UNIQUE INDEX teachers_id_uindex ON zipcode.teachers (id);
 ```
 
-In this query we create each column followed by the properties of the columns. We are using the `INTEGER`, `VARCHAR`, and `ENUM` data types
+In this query, we create each column followed by the properties of the columns. We are using the `INTEGER`, `VARCHAR`, and `ENUM` data types
 
 -
 
 ### Schemas and Tables
 
-Next let us make a student table. The students will have a name, and a classroom as well notes from the teachers on a particular student
+Next let us make a student table. The student record will have a name, a classroom, and notes from the teachers on a particular student
 
 ```
 CREATE TABLE zipcode.students
@@ -238,7 +238,7 @@ In this query we create each of these columns and are using `INTEGER`, `VARCHAR`
 
 ### Schemas and Tables
 
-Lastly we need an assignment table. This should just have the assignment name and a link to the assignment
+Lastly, we need an assignment table. This should merely have the assignment name and a link to the assignment.
 
 ```
 CREATE TABLE zipcode.assignments
@@ -251,13 +251,13 @@ CREATE UNIQUE INDEX assignments_id_uindex ON zipcode.assignments (id);
 CREATE UNIQUE INDEX assignments_URL_uindex ON zipcode.assignments (URL);
 ```
 
-We are creating a table similar to the last two, but notice we are making the URL a fixed length `CHAR` field and making that unique. Why?
+We are creating a table similar to the last two, however we are making the URL a fixed length `CHAR` field and making that unique. Why?
 
 -
 
 ### Schemas and Tables
 
-Last but not least we'll be creating the teacher_meta table. In the meta table, the developers wanna keep track of the number of years a teacher has worked here and the room number of the teacher's office.
+Last, but not least, we'll be creating the teacher_meta table. In the meta table, the developers will keep track of the number of years a teacher has worked here, and the room number of the teacher's office.
 
 ```
 CREATE TABLE zipcode.teacher_meta
@@ -269,13 +269,13 @@ CREATE TABLE zipcode.teacher_meta
 CREATE UNIQUE INDEX teacher_meta_id_uindex ON zipcode.teacher_meta (id);
 ```
 
-Here we use the `TINYINT` column and make those unsigned
+Here we use the `TINYINT` column and make those unsigned.
 
 -
 
 ### Schemas and Tables
 
-Now we have tables but we have learned that teachers are actually going to have a first name and last name and the devs have said they want these to be two separate fields. Before we continue let's `ALTER` this table.
+Now we have tables, but we have learned that teachers are actually going to have a first name and last name, and the devs have said they want these to be two separate fields. Before we continue let's `ALTER` this table.
 
 We are going to `ADD` first name amd last name. Then we will `DROP` name. 
 
@@ -288,7 +288,7 @@ ALTER TABLE zipcode.teachers DROP name;
 -
 
 ### One to One
-With those tables made, we're gonna have to set this table up with `FOREIGN KEY`s.
+With those tables made, we're going to have to set this table up with `FOREIGN KEY`s.
 
 The first thing we will be creating is a One to One relationship between teachers and teacher_meta.
 
@@ -331,7 +331,7 @@ Next we'll want to create the relationship between students and assignments. In 
 
 Both of those options are wrong. To effectively match up a many to many relationship, we will need a pivot table
 
-a pivot table will have foreign keys to both tables meaning that you can have the same student id match up to multiple assignments and vice verca.
+a pivot table will have foreign keys to both tables meaning that you can have the same student id match up to multiple assignments and vice versa.
 
 We're also going to create a unique constraint to make sure that the same assignment can't be attached to one student more than once.
 
@@ -458,7 +458,7 @@ UPDATE zipcode.teacher_meta
 SET years = years+1;
 ```
 
-Here we are able to increment the years by setting years = to whatever it's own value is plus one. This works because SQL will go row by row. In each row, the years variable is set to whatever the value is in that particular row. 
+Here we are able to increment the years by setting years = to whatever its own value is plus one. This works because SQL will go row by row. In each row, the years variable is set to whatever the value is in that particular row. 
 
 -
 
@@ -474,7 +474,7 @@ BEGIN
 END;
 ```
 
-This procedure can be called instead of a developer trying to write their own update statement. This gives us control over the data and ensures it's quality remains up to a standard. 
+This procedure can be called instead of a developer trying to write their own update statement. This gives us control over the data and ensures it's quality remains up to a standard. (using 'CALL zipcode.increment_years_experience()') 
 
 -
 -
@@ -485,7 +485,7 @@ This procedure can be called instead of a developer trying to write their own up
 
 ### Selects
 
-We've now finished all the work we need to do for the devs and are free to explore our own database and come up with some queries that will be able to answer some questions about the students. These updates will keep our boss happy and help our teachers know what they need to  do to give students the highest quality of education. 
+We've now finished all the work we need to do for the devs and are free to explore our own database and come up with some queries that will be able to answer some questions about the students. These updates will keep our boss happy and help our teachers know what they need to do to give students the highest quality of education. 
 
 -
 
@@ -493,8 +493,8 @@ We've now finished all the work we need to do for the devs and are free to explo
 
 In order to get this done we'll have to `SELECT` data out of our database. A `SELECT` statement will generally have at least two parts. 
 
-- A Select clause where we say the columns we want to see 
-- A FROM clause where we specify which table to pull that data from.
+- A Select clause, where we say the columns we want to see
+- A FROM clause, where we specify from which table to pull that data
 
 -
 
@@ -514,7 +514,7 @@ FROM zipcode.teachers;
 
 ### Where Clause
 
-We've been informed by a higher up that there is a very important project that needs a lead. Anyone who can work on front end development will be able to help immensely. Let's try and `SELECT` from teachers again, but this time let's add a `WHERE` statement to ensure we only pull a teacher with the FRONT END specialty.
+We've been informed by a higher-up that there is a very important project that needs a lead. Anyone who can work on front end development will be able to help immensely. Let's try and `SELECT` from teachers again, but this time let's add a `WHERE` statement to ensure we only pull a teacher with the FRONT END specialty.
 
 
 -
