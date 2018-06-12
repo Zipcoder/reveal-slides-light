@@ -774,7 +774,7 @@ GROUP BY tm.years;
 
 A Having clause can be used to filter the results of a query. This is similar to the Where clause, but it works only with fields that are Aggregates.
 
-Lets Write a query to find all students who have been assigned more than one assignemnt.
+Let's write a query to find all the students who have been assigned more than one assignment.
 
 -
 
@@ -789,7 +789,7 @@ GROUP BY s.name
 HAVING COUNT(a_s.assignment_id) > 1;
 ```
 
-| name               | assignemnts given |
+| name               | assignments given |
 |:-------------------|:-----------------:|
 | Linnell McLanachan | 2                 |
 
