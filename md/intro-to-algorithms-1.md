@@ -4,9 +4,11 @@
 -
 ##What is an algorithm?
 
-	An algorithm is a set of instructions for accomplishing a task.
-    Every piece of code could be called an algorithm
-	Some can speed up your code or some solve interesting problems
+An algorithm is a set of instructions for accomplishing a task.
+
+Every piece of code could be called an algorithm
+
+Some can speed up your code or some solve interesting problems
 
 -
 -
@@ -32,11 +34,16 @@ To write an AI that plays chess
 
 -
 -
-##Big O notation (continued)
+##Big O notation 
 	
 Big O notation is a mathematical notation that describes the limiting behavior of a function when the argument tends towards a particular value or infinity.
 
 For our purposes, Big O notation is used to classify algorithms according to how their running time or space requirements grow as the input size grows.
+
+
+-
+-
+##Big O notation (continued)
 
 Big O notation characterizes functions according to their growth rates: different functions with the same growth rate may be represented using the same O notation.
 
