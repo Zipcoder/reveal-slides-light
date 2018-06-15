@@ -185,7 +185,7 @@ Hence, <span class="texhtml">log<sub><i>10</i></sub> (<i>1000</i>) = 3</span>
 -
 ##Big O notation (continued)
 	
-<img src="img/BigONotationSummary.jpg">
+<img src="img/BigONotationSummary.png">
 
 
 -
