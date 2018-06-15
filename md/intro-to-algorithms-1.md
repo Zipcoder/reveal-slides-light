@@ -164,10 +164,13 @@ In mathematics, the 'logarithm' is the inverse function to exponentiation.
 
 In other words, the logarithm of a given number x is the exponent to which another fixed number, the base x, must be raised, to produce that number x.
 
-`1000 = 10 × 10 × 10 = 10^3
+<span class="texhtml">1000 = 10 × 10 × 10 = 10<sup>3</sup></span>
 
-"logarithm to base 10" of 1000 is 3`
+"logarithm to base 10" of 1000 is 3
 
+
+The logarithm of x to base b is denoted as
+<span class="texhtml">log<sub><i>b</i></sub> (<i>x</i>)</span>
 
 -
 -
