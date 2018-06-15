@@ -50,9 +50,6 @@
 
 -
 -
-
--
--
 #Linear search(continued)
 	
 ...all the stuff
@@ -80,11 +77,11 @@
 -
 -
 ##Binary Search (continued)
-    Here’s an example of how binary search works. I’m thinking of a number between 1 and 100
-        You have to try to guess my number in the fewest tries possible. With every guess, I’ll tell you if your guess is too low, too high, or correct.
-        Suppose you start guessing like this: 1, 2, 3, 4 .... Here’s how it would go.
-        A bad approach to number guessing
-        This is simple search (maybe stupid search would be a better term). With each guess, you’re eliminating only one number. If my number was 99, it could take you 99 guesses to get there!
+Here’s an example of how binary search works. I’m thinking of a number between 1 and 100
+    You have to try to guess my number in the fewest tries possible. With every guess, I’ll tell you if your guess is too low, too high, or correct.
+    Suppose you start guessing like this: 1, 2, 3, 4 .... Here’s how it would go.
+    A bad approach to number guessing
+    This is simple search (maybe stupid search would be a better term). With each guess, you’re eliminating only one number. If my number was 99, it could take you 99 guesses to get there!
 
 -
 -
@@ -136,13 +133,11 @@
 
 -
 -
--
 ##Big O notation (continued)
 	
 ...more stuff
 
 
--
 -
 -
 ##Big O notation (continued)
@@ -152,13 +147,11 @@
 
 -
 -
--
 #Big O notation (continued)
 	
 ...all the stuff
 
 
--
 -
 -
 # To be continued...
