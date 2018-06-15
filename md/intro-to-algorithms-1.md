@@ -177,8 +177,8 @@ I’m thinking of a number between 1 and 100:
 -
 -
 ##Binary Search (continued)
-            
-`// Java implementation of recursive Binary Search
+Java implementation of recursive Binary Search
+
     class BinarySearch
     {
         int binarySearch(int arr[], int l, int r, int x)
