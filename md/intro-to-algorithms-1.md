@@ -170,11 +170,13 @@ A bad approach to number guessing
 ##Binary Search (continued)
 A better way to search
 
-With binary search, you guess the middle number and eliminate half the remaining numbers every time
+With binary search, you guess the middle number and eliminate half the remaining numbers every time:
+
     100 items -> 50 -> 25 -> 13 -> 7 -> 4 -> 2 -> 1
-        Eliminate half the numbers everytime
+    Eliminate half the numbers everytime
         
-Imagine a dictionary with 240,000 words
+Imagine a dictionary with 240,000 words:
+
         Simple Search = ? steps
         Binary search = ? steps
         
