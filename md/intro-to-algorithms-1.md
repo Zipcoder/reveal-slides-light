@@ -115,17 +115,8 @@ The time complexity of above algorithm is O(n).
 -
 
 ##Linear search(continued)
-	
-...even stuff
 
--
--
-#Linear search(continued)
-	
-
-Linear search is rarely used practically because other search algorithms such as the binary search algorithm and hash tables allow significantly faster searching in comparison.
-
-
+Linear search is rarely used practically because other search algorithms, (such as the binary search algorithm and hash tables) allow significantly faster searching in comparison.
 
 -
 -
@@ -133,7 +124,7 @@ Linear search is rarely used practically because other search algorithms such as
 
 -
 -
-##Binary Search (continued)
+##Binary Search
     Suppose you’re searching for a person in the phone book (what an old-fashioned sentence!). Their name starts with K.
         Would you start at the beginning or would you jump to the middle
         Facebook login. 
