@@ -1,12 +1,5 @@
-#Lecture Template
-
-
-
--
--
 #Intro to Algorithms
 
-[4em](https://www.w3schools.com/CSSref/css_units.asp) [checksum](https://en.wikipedia.org/wiki/Checksum) [Clojure](https://clojure.org/) [gwt](http://www.gwtproject.org/) [emmet](http://emmet.io/)
 
 -
 ##What is an algorithm?
@@ -38,25 +31,20 @@
 
 -
 -
-#Linear search(continued)
+##Linear search(continued)
 	
 ...stuff
 
 -
 -
-
--
--
-#Linear search(continued)
+##Linear search(continued)
 	
 ... more stuff
 
 -
 -
 
--
--
-#Linear search(continued)
+##Linear search(continued)
 	
 ...even stuff
 
@@ -71,11 +59,11 @@
 
 -
 -
-#Binary Search
+##Binary Search
 
 -
 -
-#Binary Search (continued)
+##Binary Search (continued)
 Suppose you’re searching for a person in the phone book (what an old-fashioned sentence!). Their name starts with K.
     Would you start at the beginning or would you jump to the middle
     Facebook login. 
@@ -85,13 +73,13 @@ Suppose you’re searching for a person in the phone book (what an old-fashioned
 
 -
 -
-#Binary Search (continued)
+##Binary Search (continued)
 Binary search is an algorithm; its input is a sorted list of elements (I’ll explain later why it needs to be sorted). If an element you’re looking for is in that list, binary search returns the position where it’s located. Otherwise, binary search returns null
     Looking for companies in a phone book with binary search (or other example)
 
 -
 -
-#Binary Search (continued)
+##Binary Search (continued)
 Here’s an example of how binary search works. I’m thinking of a number between 1 and 100
     You have to try to guess my number in the fewest tries possible. With every guess, I’ll tell you if your guess is too low, too high, or correct.
     Suppose you start guessing like this: 1, 2, 3, 4 .... Here’s how it would go.
@@ -100,7 +88,7 @@ Here’s an example of how binary search works. I’m thinking of a number betwe
 
 -
 -
-#Binary Search (continued)
+##Binary Search (continued)
     A better way to search
         With binary search, you guess the middle number and eliminate half the remaining numbers every time
         100 items -> 50 -> 25 -> 13 -> 7 -> 4 -> 2 -> 1
@@ -110,25 +98,25 @@ Here’s an example of how binary search works. I’m thinking of a number betwe
             Binary search = ? steps
 -
 -
-#Array vs List
+##Array vs List
 	
 ...stuff
 
 -
 -
-#Array vs List (continued)
+##Array vs List (continued)
 	
 ...more stuff
 
 -
 -
-#Array vs List (continued)
+##Array vs List (continued)
 	
 ...even more stuff
 
 -
 -
-#Array vs List (continued)
+##Array vs List (continued)
 	
 ...all the stuff
 
@@ -141,7 +129,15 @@ Here’s an example of how binary search works. I’m thinking of a number betwe
 
 -
 -
-#Big O notation (continued)
+##Big O notation (continued)
+	
+... stuff
+
+
+-
+-
+-
+##Big O notation (continued)
 	
 ...more stuff
 
@@ -149,17 +145,9 @@ Here’s an example of how binary search works. I’m thinking of a number betwe
 -
 -
 -
-#Big O notation (continued)
+##Big O notation (continued)
 	
-...more stuff
-
-
--
--
--
-#Big O notation (continued)
-	
-...more stuff
+...even more stuff
 
 
 -
@@ -167,7 +155,7 @@ Here’s an example of how binary search works. I’m thinking of a number betwe
 -
 #Big O notation (continued)
 	
-...more stuff
+...all the stuff
 
 
 -
