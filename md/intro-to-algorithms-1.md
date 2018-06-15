@@ -9,18 +9,19 @@
 [4em](https://www.w3schools.com/CSSref/css_units.asp) [checksum](https://en.wikipedia.org/wiki/Checksum) [Clojure](https://clojure.org/) [gwt](http://www.gwtproject.org/) [emmet](http://emmet.io/)
 
 -
-#What is an algorithm?`-\n`
+##What is an algorithm?
 
-	An algorithm is a set of instructions for accomplishing a task. Every piece of code could be called an algorithm 
-	Some can speed up your code or some solve interesting problems 
+	An algorithm is a set of instructions for accomplishing a task.
+    Every piece of code could be called an algorithm
+	Some can speed up your code or some solve interesting problems
 
 -
 -
 
-#Different types of algorithms
+##Different types of algorithms
 
 	Searching
-	Graph algorithms to calculate the shortest route to your destination 
+	Graph algorithms to calculate the shortest route to your destination
 	To write an AI that plays chess
 
 	f(x) = x × 2
