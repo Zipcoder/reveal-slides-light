@@ -172,6 +172,9 @@ In other words, the logarithm of a given number x is the exponent to which anoth
 The logarithm of x to base b is denoted as
 <span class="texhtml">log<sub><i>b</i></sub> (<i>x</i>)</span>
 
+Hence, <span class="texhtml">log<sub><i>10</i></sub> (<i>1000</i>) = 3</span>
+
+
 -
 -
 ##Big O notation (continued)
