@@ -23,6 +23,64 @@
 `backticks.surround("sample code");`
 
 
+
+
+
+-
+-
+#Big O notation
+
+
+
+-
+-
+##Big O notation (continued)
+	
+Big O notation is a mathematical notation that describes the limiting behavior of a function when the argument tends towards a particular value or infinity.
+
+For our purposes, Big O notation is used to classify algorithms according to how their running time or space requirements grow as the input size grows.
+
+Big O notation characterizes functions according to their growth rates: different functions with the same growth rate may be represented using the same O notation.
+
+The letter O is used because the growth rate of a function is also referred to as the order of the function.
+
+A description of a function in terms of big O notation usually only provides an upper bound on the growth rate of the function. 
+
+
+-
+-
+##Big O notation (continued)
+	
+
+In mathematics, the 'logarithm' is the inverse function to exponentiation.
+
+In other words, the logarithm of a given number x is the exponent to which another fixed number, the base x, must be raised, to produce that number x.
+
+<span class="texhtml">1000 = 10 × 10 × 10 = 10<sup>3</sup></span>
+
+"logarithm to base 10" of 1000 is 3
+
+
+The logarithm of x to base b is denoted as
+<span class="texhtml">log<sub><i>b</i></sub> (<i>x</i>)</span>
+
+Hence, <span class="texhtml">log<sub><i>10</i></sub> (<i>1000</i>) = 3</span>
+
+
+-
+-
+##Big O notation (continued)
+	
+<img src="img/BigOgraph.jpeg">
+
+-
+-
+##Big O notation (continued)
+	
+<img src="img/BigONotationSummary.png">
+
+
+
 -
 -
 #Linear search
@@ -72,11 +130,8 @@ The time complexity of above algorithm is O(n).
 #Linear search(continued)
 	
 
-Linear search is rarely used practically because other search algorithms such as the binary search algorithm and hash tables allow significantly faster searching comparison to Linear search.
+Linear search is rarely used practically because other search algorithms such as the binary search algorithm and hash tables allow significantly faster searching in comparison.
 
-Also See – Binary Search
-
-Please write comments if you find anything incorrect, or you want to share more information about the topic discussed above
 
 
 -
@@ -96,17 +151,29 @@ Please write comments if you find anything incorrect, or you want to share more 
 -
 -
 ##Binary Search (continued)
-    Binary search is an algorithm; its input is a sorted list of elements (I’ll explain later why it needs to be sorted). If an element you’re looking for is in that list, binary search returns the position where it’s located. Otherwise, binary search returns null
+    Binary search is an algorithm; its input is a sorted list of elements (I’ll explain later why it needs to be sorted).
+    If an element you’re looking for is in that list, binary search returns the position where it’s located.
+    Otherwise, binary search returns null.
         Looking for companies in a phone book with binary search (or other example)
 
 -
 -
 ##Binary Search (continued)
-Here’s an example of how binary search works. I’m thinking of a number between 1 and 100
-    You have to try to guess my number in the fewest tries possible. With every guess, I’ll tell you if your guess is too low, too high, or correct.
+Here’s an example of how binary search works.
+
+I’m thinking of a number between 1 and 100:
+    You have to try to guess my number in the fewest tries possible.
+    With every guess, I’ll tell you if your guess is too low, too high, or correct.
     Suppose you start guessing like this: 1, 2, 3, 4 .... Here’s how it would go.
+
+-
+-
+##Binary Search (continued)
+
     A bad approach to number guessing
-    This is simple search (maybe stupid search would be a better term). With each guess, you’re eliminating only one number. If my number was 99, it could take you 99 guesses to get there!
+        That technique is simple search (maybe stupid search would be a better term).
+        With each guess, you’re eliminating only one number.
+        If my number was 99, it could take you 99 guesses to get there!
 
 -
 -
@@ -118,6 +185,60 @@ Here’s an example of how binary search works. I’m thinking of a number betwe
         Imagine a dictionary with 240,000 words
             Simple Search = ? steps
             Binary search = ? steps
+            
+            
+            
+
+-
+-
+##Binary Search (continued)
+            
+`// Java implementation of recursive Binary Search
+class BinarySearch
+{
+    // Returns index of x if it is present in arr[l..
+    // r], else return -1
+    int binarySearch(int arr[], int l, int r, int x)
+    {
+        if (r>=l)
+        {
+            int mid = l + (r - l)/2;
+ 
+            // If the element is present at the 
+            // middle itself
+            if (arr[mid] == x)
+               return mid;
+ 
+            // If element is smaller than mid, then 
+            // it can only be present in left subarray
+            if (arr[mid] > x)
+               return binarySearch(arr, l, mid-1, x);
+ 
+            // Else the element can only be present
+            // in right subarray
+            return binarySearch(arr, mid+1, r, x);
+        }
+ 
+        // We reach here when element is not present
+        //  in array
+        return -1;
+    }
+ 
+    // Driver method to test above
+    public static void main(String args[])
+    {
+        BinarySearch ob = new BinarySearch();
+        int arr[] = {2,3,4,10,40};
+        int n = arr.length;
+        int x = 10;
+        int result = ob.binarySearch(arr,0,n-1,x);
+        if (result == -1)
+            System.out.println("Element not present");
+        else
+            System.out.println("Element found at index " + 
+                                                 result);
+    }
+}`
 -
 -
 ##Array vs List
@@ -139,58 +260,6 @@ Here’s an example of how binary search works. I’m thinking of a number betwe
 -
 -
 ##Array vs List (continued)
-	
-...all the stuff
-
-
--
--
-#Big O notation
-
-
-
--
--
-##Big O notation (continued)
-	
-... stuff
-
--
--
-##Big O notation (continued)
-	
-
-In mathematics, the 'logarithm' is the inverse function to exponentiation.
-
-In other words, the logarithm of a given number x is the exponent to which another fixed number, the base x, must be raised, to produce that number x.
-
-<span class="texhtml">1000 = 10 × 10 × 10 = 10<sup>3</sup></span>
-
-"logarithm to base 10" of 1000 is 3
-
-
-The logarithm of x to base b is denoted as
-<span class="texhtml">log<sub><i>b</i></sub> (<i>x</i>)</span>
-
-Hence, <span class="texhtml">log<sub><i>10</i></sub> (<i>1000</i>) = 3</span>
-
-
--
--
-##Big O notation (continued)
-	
-<img src="img/BigOgraph.jpeg">
-
--
--
-##Big O notation (continued)
-	
-<img src="img/BigONotationSummary.png">
-
-
--
--
-#Big O notation (continued)
 	
 ...all the stuff
 
