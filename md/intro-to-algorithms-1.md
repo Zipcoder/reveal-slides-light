@@ -38,8 +38,27 @@
 -
 -
 ##Linear search(continued)
-	
-... more stuff
+	```// Java code for linearly search x in arr[].  If x 
+// is present  then return its  location,  otherwise
+// return -1
+class LinearSearch
+{
+    // This function returns index of element x in arr[]
+    static int search(int arr[], int n, int x)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            // Return the index of the element if the element
+            // is found
+            if (arr[i] == x)
+                return i;
+        }
+  
+        // return -1 if the element is not found
+        return -1;
+    }
+} ```
+The time complexity of above algorithm is O(n).
 
 -
 -
@@ -52,7 +71,13 @@
 -
 #Linear search(continued)
 	
-...all the stuff
+
+Linear search is rarely used practically because other search algorithms such as the binary search algorithm and hash tables allow significantly faster searching comparison to Linear search.
+
+Also See – Binary Search
+
+Please write comments if you find anything incorrect, or you want to share more information about the topic discussed above
+
 
 -
 -
@@ -130,19 +155,31 @@ Here’s an example of how binary search works. I’m thinking of a number betwe
 	
 ... stuff
 
+-
+-
+##Big O notation (continued)
+	
+
+In mathematics, the 'logarithm' is the inverse function to exponentiation.
+
+In other words, the logarithm of a given number x is the exponent to which another fixed number, the base x, must be raised, to produce that number x.
+
+`1000 = 10 × 10 × 10 = 10^3
+
+"logarithm to base 10" of 1000 is 3`
+
 
 -
 -
 ##Big O notation (continued)
 	
-...more stuff
-
+<img src="img/BigOgraph.jpeg">
 
 -
 -
 ##Big O notation (continued)
 	
-...even more stuff
+<img src="img/BigONotationSummary.jpg">
 
 
 -
