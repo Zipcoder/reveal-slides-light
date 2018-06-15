@@ -96,7 +96,8 @@ Hence, <span class="texhtml">log<sub><i>10</i></sub> (<i>1000</i>) = 3</span>
 -
 -
 ##Linear search(continued)
-Java code for linearly search x in arr[].  If x is present  then return its  location.  otherwise, return -1
+Java implementation for linear search x in arr[].
+If x is present  then return its  location.  otherwise, return -1
 
     class LinearSearch
     {
@@ -126,18 +127,21 @@ Linear search is rarely used practically because other search algorithms, (such 
 -
 -
 ##Binary Search
-    Suppose you’re searching for a person in the phone book (what an old-fashioned sentence!). Their name starts with K.
-        Would you start at the beginning or would you jump to the middle
-        Facebook login. 
-            Search username database.
-            You name is karlmegeddon
-        How would you solve these search problems: binary search
+Suppose you’re searching for a person in the phone book (what an old-fashioned sentence!). Their name starts with K.
+
+Would you start at the beginning or would you jump to the middle?
+    Facebook login: 
+        -Search username database.
+        -Your name is karlmegeddon
+    How would you solve these search problems: binary search
 
 -
 -
 ##Binary Search (continued)
-    Binary search is an algorithm; its input is a sorted list of elements (I’ll explain later why it needs to be sorted).
-    If an element you’re looking for is in that list, binary search returns the position where it’s located.
+Binary search is an algorithm; its input is a sorted list of elements (I’ll explain later why it needs to be sorted).
+
+If an element you’re looking for is in that list, binary search returns the position where it’s located.
+
     Otherwise, binary search returns null.
         Looking for companies in a phone book with binary search (or other example)
 
@@ -147,9 +151,10 @@ Linear search is rarely used practically because other search algorithms, (such 
 Here’s an example of how binary search works.
 
 I’m thinking of a number between 1 and 100:
-    You have to try to guess my number in the fewest tries possible.
-    With every guess, I’ll tell you if your guess is too low, too high, or correct.
-    Suppose you start guessing like this: 1, 2, 3, 4 .... Here’s how it would go.
+
+    -You have to try to guess my number in the fewest tries possible.
+    -With every guess, I’ll tell you if your guess is too low, too high, or correct.
+    -Suppose you start guessing like this: 1, 2, 3, 4 .... Here’s how it would go.
 
 -
 -
