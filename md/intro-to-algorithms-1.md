@@ -61,9 +61,9 @@ In mathematics, the 'logarithm' is the inverse function to exponentiation.
 
 In other words, the logarithm of a given number x is the exponent to which another fixed number, the base x, must be raised, to produce that number x.
 
-    <span class="texhtml">1000 = 10 × 10 × 10 = 10<sup>3</sup></span>
+<span class="texhtml">1000 = 10 × 10 × 10 = 10<sup>3</sup></span>
 
-    "logarithm to base 10" of 1000 is 3
+"logarithm to base 10" of 1000 is 3
 
 
 The logarithm of x to base b is denoted as
@@ -144,8 +144,9 @@ Binary search is an algorithm; its input is a sorted list of elements (I’ll ex
 
 If an element you’re looking for is in that list, binary search returns the position where it’s located.
 
-    Otherwise, binary search returns null.
-        Looking for companies in a phone book with binary search (or other example)
+Otherwise, binary search returns null.
+
+Ex: Looking for companies in a phone book with binary search 
 
 -
 -
