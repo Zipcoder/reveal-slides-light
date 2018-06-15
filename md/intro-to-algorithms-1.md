@@ -13,16 +13,14 @@
 
 ##Different types of algorithms
 
-	Searching
-	Graph algorithms to calculate the shortest route to your destination
-	To write an AI that plays chess
+Searching
+
+Graph algorithms to calculate the shortest route to your destination
+
+To write an AI that plays chess
 
 	f(x) = x × 2
 		What is f(5)?
-
-`backticks.surround("sample code");`
-
-
 
 
 
@@ -80,22 +78,19 @@ Hence, <span class="texhtml">log<sub><i>10</i></sub> (<i>1000</i>) = 3</span>
 <img src="img/BigONotationSummary.png">
 
 
+-
+-
+#Linear search	
 
 -
 -
-#Linear search
-	
-
-
--
--
-##Linear search(continued)
+##Linear search
 	
 ...stuff
 
 -
 -
-##Linear search(continued)
+##Linear search
 Java implementation for linear search x in arr[].
 If x is present  then return its  location.  otherwise, return -1
 
