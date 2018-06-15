@@ -97,7 +97,8 @@ Hence, <span class="texhtml">log<sub><i>10</i></sub> (<i>1000</i>) = 3</span>
 -
 ##Linear search(continued)
 	Java code for linearly search x in arr[].  If x is present  then return its  location.  otherwise, return -1
-    `class LinearSearch
+
+```class LinearSearch
 {
     {
         for (int i = 0; i < n; i++)
@@ -107,7 +108,7 @@ Hence, <span class="texhtml">log<sub><i>10</i></sub> (<i>1000</i>) = 3</span>
         }
         return -1;
     }
-} `
+} ```
 
 The time complexity of above algorithm is O(n).
 
