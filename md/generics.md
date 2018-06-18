@@ -198,11 +198,11 @@ class MyNode extends Node {
 # What CAN'T we do with Generics
 -
 -
-*<span class="fragment fade-up"> No primitive types</span>
-  *<span class="fragment fade-up"> Use wrapper classes</span>
-*<span class="fragment fade-up"> No runtime type inquiry on inner types</span>
-  *<span class="fragment fade-up"> no `instanceof Pair<String>` nor `instanceof Pair<T>`</span>
- * <span class="fragment fade-up"> `Pair<String>` and `Pair<Integer>` are of equal classes as far as runtime checking is concerned.</span>
+* No primitive types
+  * <div class="fragment fade-up">Use wrapper classes</div>
+* No runtime type inquiry on inner types
+  * no `instanceof Pair<String>` nor `instanceof Pair<T>`
+  * `Pair<String>` and `Pair<Integer>` are of equal classes as far as runtime checking is concerned.
 -
 -
 * No Arrays of parameterized types
