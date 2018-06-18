@@ -237,8 +237,10 @@ class MyNode extends Node {
 -
 # Reflection
 You can, in fact, leverage reflection to find out about an Object's generic past.
-This is all at runtime, though.  So, in all reality, you can see what's happening and where Objects came from, but know that as far as the compiler is concerned, they don't really matter.
-Essentially they've functionally been erased, but there is still a record.
+This is all at runtime, though.
+
+Basically, you can see what's happening and where Objects came from, but know that as far as the compiler is concerned, they don't really matter.
+It's as if they've functionally been erased, but there is still a record.
 
 -
 -
