@@ -198,36 +198,38 @@ class MyNode extends Node {
 # What CAN'T we do with Generics
 -
 -
-* No primitive types
+## What CAN'T we do with Generics
+* <div class="fragment fade-up">No primitive types</div>
   * <div class="fragment fade-up">Use wrapper classes</div>
-* No runtime type inquiry on inner types
-  * no `instanceof Pair<String>` nor `instanceof Pair<T>`
-  * `Pair<String>` and `Pair<Integer>` are of equal classes as far as runtime checking is concerned.
+* <div class="fragment fade-up">No runtime type inquiry on inner types</div>
+  * <div class="fragment fade-up">no `instanceof Pair<String>` nor `instanceof Pair<T>`</div>
+  * <div class="fragment fade-up">`Pair<String>` and `Pair<Integer>` are of equal classes as far as runtime checking is concerned.</div>
 -
 -
-* No Arrays of parameterized types
-  * Remember, the compiler will make these into Objects (or bounding type).  You pretty much always don't want this.
-  * You can get around this with some wildcard magic.  But, like, don't.
-  * You can, however, use `@SafeVarargs` for varargs.
+## What CAN'T we do with Generics (continued)
+* <div class="fragment fade-up">No Arrays of parameterized types</div>
+  * <div class="fragment fade-up">Remember, the compiler will make these into Objects (or bounding type).  You pretty much always don't want this.</div>
+  * <div class="fragment fade-up">You can get around this with some wildcard magic.  But, like, don't.</div>
+  * <div class="fragment fade-up">You can, however, use `@SafeVarargs` for varargs.</div>
 -
 -
-* No instantiating type variables
-  * `new T()` doesn't work
-  * Pass in a `Class<T>` and call `class.newInstance()`
-  * Use a function with a constructor expression
-  * Either way, if you're going to be instantiating a type variable, you're going to be using functions that take arguments instead of directly.
+* <div class="fragment fade-up">No instantiating type variables</div>
+  * <div class="fragment fade-up">`new T()` doesn't work</div>
+  * <div class="fragment fade-up">Pass in a `Class<T>` and call `class.newInstance()`</div>
+  * <div class="fragment fade-up">Use a function with a constructor expression</div>
+  * <div class="fragment fade-up">Either way, if you're going to be instantiating a type variable, you're going to be using functions that take arguments instead of directly.</div>
 -
 -
-* No generic arrays
-  * Type erasure here will hurt you.  Casting from Objects or bounding types to the type you want probably isn't gonna work in your favor.
-  * Again, here's where you have a function that will take an array constructor expression, kind of like instantiating type variables.
-  * Or, call `Array.newInstance`
+* <div class="fragment fade-up">No generic arrays</div>
+  * <div class="fragment fade-up">Type erasure here will hurt you.  Casting from Objects or bounding types to the type you want probably isn't gonna work in your favor.</div>
+  * <div class="fragment fade-up">Again, here's where you have a function that will take an array constructor expression, kind of like instantiating type variables.</div>
+  * <div class="fragment fade-up">Or, call `Array.newInstance`</div>
 -
 -
-* No using them as statics in generic classes.
-  * You can use them in exception specs, though.
-* No throwing or catching them.
-  * Using generics wrong in the context of Exceptions can even break checked exception checking.
+* <div class="fragment fade-up">No using them as statics in generic classes.</div>
+  * <div class="fragment fade-up">You can use them in exception specs, though.</div>
+* <div class="fragment fade-up">No throwing or catching them.</div>
+  * <div class="fragment fade-up">Using generics wrong in the context of Exceptions can even break checked exception checking.</div>
 -
 -
 # Reflection
