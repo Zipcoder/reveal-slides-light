@@ -223,7 +223,7 @@ class MyNode extends Node {
 -
 ## What CAN'T we do with Generics (continued)
 * No generic arrays
-  * Type erasure here will hurt you.  Casting from Objects or bounding types to the type you want probably isn't gonna work in your favor.
+  * Type erasure here will hurt you.  Casting from Objects or bounding types to the type you want probably isn't going to work in your favor.
   * Again, here's where you have a function that will take an array constructor expression, kind of like instantiating type variables.
   * Or, call `Array.newInstance`
 -
@@ -236,4 +236,6 @@ class MyNode extends Node {
 -
 -
 # Reflection
-You can, in fact, leverage reflection to find out about an Object's generic past.  This is all at runtime, though.  So, in all reality, you can see what's happening and where Objects came from, but know that as far as the compiler is concerned, they don't really matter.  Like, they've functionally been erased, but there is still a record.
+You can, in fact, leverage reflection to find out about an Object's generic past.
+This is all at runtime, though.  So, in all reality, you can see what's happening and where Objects came from, but know that as far as the compiler is concerned, they don't really matter.
+Essentially they've functionally been erased, but there is still a record.
