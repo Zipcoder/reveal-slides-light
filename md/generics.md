@@ -94,6 +94,7 @@ Bounded Wildcards, however, let you care somewhat about the type
 
 -
 -
+## Wildcards (continued)
 You can also capture wildcards by passing the variable to another function that doesn't have a wildcard.  Though, this is rarely used (or allowed), since the compiler needs to be certain that the wildcard represents a single type.
 -
 -
@@ -135,11 +136,11 @@ Also, if `Box` extended multiple things, the compiler would merely make everythi
 Java synthesizes bridge methods for us so we can have generics and polymorphism.
 -
 -
+## Polymorphism and Bridge Methods (example)
 ```Java
 public class Node<T> {
     public T data;
     public Node(T data) { this.data = data; }
-
     public void setData(T data) {
         System.out.println("Node.setData");
         this.data = data;
@@ -147,7 +148,6 @@ public class Node<T> {
 }
 public class MyNode extends Node<Integer> {
     public MyNode(Integer data) { super(data); }
-
     public void setData(Integer data) {
         System.out.println("MyNode.setData");
         super.setData(data);
@@ -198,11 +198,11 @@ class MyNode extends Node {
 # What CAN'T we do with Generics
 -
 -
-* No primitive types
-  * Use wrapper classes
-* No runtime type inquiry on inner types
-  * no `instanceof Pair<String>` nor `instanceof Pair<T>`
-  * `Pair<String>` and `Pair<Integer>` are of equal classes as far as runtime checking is concerned.
+<p class="fragment fade-up">* No primitive types</p>
+<p class="fragment fade-up">  * Use wrapper classes</p>
+<p class="fragment fade-up">* No runtime type inquiry on inner types</p>
+<p class="fragment fade-up">  * no `instanceof Pair<String>` nor `instanceof Pair<T>`</p>
+<p class="fragment fade-up">  * `Pair<String>` and `Pair<Integer>` are of equal classes as far as runtime checking is concerned.</p>
 -
 -
 * No Arrays of parameterized types
