@@ -174,5 +174,3 @@ Answer: Yes
 * Is a lambda expression an object
 Answer is complicated, but no
 Exact answer: a lambda is an object without an identity
-
--
