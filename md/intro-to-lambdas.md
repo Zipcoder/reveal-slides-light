@@ -219,6 +219,7 @@ public interface BiConsumer<T, U> {
 ```
 takes two objects instead of one
 
+-
 ### Predicate
 
 ```
@@ -238,6 +239,7 @@ public interface BiPredicate<T, U> {
 }
 ```
 
+-
 ### Function
 
 ```
