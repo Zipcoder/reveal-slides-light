@@ -176,3 +176,142 @@ Answer is complicated, but no
 Exact answer: a lambda is an object without an identity
 
 -
+-
+## Functional Interface Package
+
+* java.util.function is a new package as of Java 8
+* offers around 40 general porpose interfaces that are used by other classes ans are available to developers for their own uses
+* these interfaces are divided up into 4 categories
+	* Supplier
+	* Consumer
+	* Predicate
+	* Function
+	
+-
+### Supplier
+
+```
+@FunctionalInterface
+public interface Supplier<T> {
+	T get();
+}
+```
+A single interface that doesn't take any object and that provides a new object.
+
+-
+### Consumer
+
+```
+@FunctionalInterface
+public interface Consumer<T>{
+	void accept(T t);
+}
+```
+The consumer accepts an object and doesn't return anything. (`System.out.println`)
+
+**BiConsumer**
+
+```
+@FunctionalInterface
+public interface BiConsumer<T, U> {
+	void accept(T t, U u);
+}
+```
+takes two objects instead of one
+
+-
+### Predicate
+
+```
+@FunctionInterface
+public interface Predicate<T> {
+	boolean test(T t);
+}
+```
+A predicate takes an object as a parameter and returns a boolean
+
+**BiPredicate**
+
+```
+@FunctionalInterface
+public interface BiPredicate<T, U> {
+	boolean test(T t, U u);
+}
+```
+
+-
+### Function
+
+```
+@FunctionaInterface
+public interface Function<T, R> {
+	R apply (T t);
+}
+```
+A function takes an object as a parameter and returns another object
+
+**BiFunction**
+
+```
+@FunctionalInterface
+public interface BiFunction<T, U, R> {
+	R apply (T t, U u);
+}
+```
+
+-
+## More Lambda Expressions Syntax
+Most of the time, parameter types can be omitted
+
+```
+Comparator<String> c = 
+	(String s1, String s2) ->
+		Integer.compare(s1.lingth(), s2.length());
+```
+Becomes:
+
+```
+Comparator<String> c =
+	(s1, s2) ->
+		Integer.compare(s1.length(), s2.length());
+```
+
+-
+-
+## Method References
+
+* This lambda expression
+ 
+`Consumer<String> c = s -> System.out.println(s);`
+
+* can be written like this:
+
+`Consumer<String> c = System.out::println;`
+	
+It is composed of the object System.out and the method println seperated by `::`. This is just a shortcut to writting a lambda expression
+
+-
+
+* This lambda expression:
+
+`Comparator<Integer> c = (i1, i2) -> Integer.compare(i1, i2);`
+
+* Can be written like this:
+
+`Comparator<Integer> c = Integer::compare;`
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+

@@ -127,7 +127,7 @@ Assert.equals(expectedNumber, actualNumber);
 -
 #One Assertion to Rule them All
 
-A could unit test should only come to one binary conclusion , which should also be quick and easy to understand. **SINGLE RESPONSIBLITY**
+A good unit test should only come to one binary conclusion , which should also be quick and easy to understand. **SINGLE RESPONSIBLITY**
 
 Single Concept per test
 

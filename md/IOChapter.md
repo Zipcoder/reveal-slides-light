@@ -201,7 +201,7 @@ public class Student implements Serializable{
     if(gradeStats == null){
       gradeStats = new GradeStats(testScores);
     }
-    return GradeStats;
+    return gradeStats;
   }
 }
 ```
