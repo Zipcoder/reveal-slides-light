@@ -616,7 +616,7 @@ private static final Float pi = 3.14159;
 -
 -
 ##Static Methods
-* Static methods are also sometimes referred to and factory methods. They are methods that do not do any direct operations on an object.
+* Static methods are also sometimes referred to as factory methods. They are methods that do not do any direct operations on an object.
 
 ```
 public class Calculator {
@@ -682,7 +682,7 @@ public void giveRaise(Person emp, float raiseAmount) {
 ##Object Construction  
 * Objects are containers, the objects we use and create are composed of other objects.
 * As stated before, we are in an eternal struggle to avoid null objects.
-* Object oriented programming is objects talking to other objects: if we send a message to an object that doesn’t exist, our programs will fail.
+* Object-oriented programming is objects talking to other objects: if we send a message to an object that doesn’t exist, our programs will fail.
 
 -
 ###Constructors
@@ -698,7 +698,7 @@ public void giveRaise(Person emp, float raiseAmount) {
 **Overloading** is when we have methods that have the
 
 * same name
-* return the type
+* return type
 * but take different parameters.
 
 ```
@@ -753,7 +753,7 @@ public Superman() {}
 
 ##Naming conventions
 
-* Life is already hard enough, let's not add complexity where there need not be any. Name things what they are. Sure, we all love the idea of naming every variable after our favorite 80s cartoon characters, but eventually we will forget what String panthero5000 is in reference too.
+* Life is already hard enough, let's not add complexity where there need not be any. Name things what they are. Sure, we all love the idea of naming every variable after our favorite 80s cartoon characters, but eventually we will forget what String panthro5000 is in reference to.
 
 -
 -
@@ -802,7 +802,7 @@ public class Superman( ){
 -
 ###Initialization Blocks
 
-* This is where Initialization Blocks come in, they are used to run a set of instructions when the Class is constructed, before any objects are ever created.
+* This is where **Initialization Blocks** come in, they are used to run a set of instructions when the **Class** is constructed, before any objects are ever created.
 
 ```
 public Superman ( ){
@@ -819,14 +819,14 @@ public Superman ( ){
 
 The static block is ONLY run once when the class is loaded for the first time in the JVM.
 
-the **System** package might do this for the **out** object, so that it's ready to be used right away.
+The **System** package might do this for the **out** object, so that it's ready to be used right away.
 
 -
 -
 
 ###Object Destruction and the finalize method
 
-* Once you break the connection between the reference which lives in the stack, and the instance which lives in the heap, there is no way to reconnect with that object. Even though it will not be removed until the next Garbage Collection Cycle, as far as you are concerned, it's gone.
+* Once you break the connection between the reference which lives in the **stack**, and the instance which lives in the **heap**, there is no way to reconnect with that object. Even though it will not be removed until the next Garbage Collection Cycle, as far as you are concerned, it's gone.
 
 -
 
