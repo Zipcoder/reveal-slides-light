@@ -139,8 +139,12 @@ Single Concept per test
 -
 #F.I.R.S.T
 
-* **F** is for **fast** - The test should be fast. If its going to fail, let's get it over with.
-* **I** is for **Independent** - every test is an island, a "LONELY ISLAND". The test should not have to fire off other methods to complete itself.
+* **F** is for **fast** - The test should be fast. If its going to fail lets get it over with.
+* **I** is for **Independent** - every test is an island a "LONELY ISLAND". The the test should not have to fire off other methods to complete itself.
 * **R** is for **Repeatable** - every test should be able to run in any environment , local, QA, and Production.
 * **S** is for **Self-Validating** - every test should have a binary boolean output pass or fail.
 * **T** is for **Timely** - test should be written FIRST... OR ELSE!!! 
+
+-
+-
+<img src="/reveal-slides-light/img/bunnies/cute-rabbit-2.jpg" >

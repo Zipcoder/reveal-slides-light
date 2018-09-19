@@ -55,9 +55,9 @@ Simplify each layer down to the minimum viable concepts
 Structure so that abstractions depend upon lower layers
 
 -
-### Some types of Abstraction
+### Some types of Abstraction:
 **Structured Abstaction**<br>
-Split complex operations into sumpler methods
+Split complex operations into simpler methods
 
 **Class Abstraction**<br>
 Delegate responsibility to other classes

@@ -103,7 +103,6 @@ If x is present  then return its  location.  otherwise, return -1
 
     class LinearSearch
     {
-        static int search(int arr[], int n, int x)
         {
             for (int i = 0; i < n; i++)
             {

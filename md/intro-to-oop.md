@@ -59,6 +59,7 @@ All **OBJECTS** have
 * When you run a Java program, it creates Objects which do useful (we hope) things
 * when it doesn't, you edit a class and run/test it again - forever sometimes
 
+-
 * create **variables** to store State
 * write **methods** to describe Behavior
 * write **constructors** to construct and initialize an Object and give it an Id
@@ -95,16 +96,17 @@ public class Person {
 
 -
 
-# Classes/Objects and the Instance/static difference
-
+## Classes/Objects and the Instance/static difference
 * if a **method** is declared **static**
   * you do not need to create an object to call it.
   * e.g. Math.sin(x);
-
   * if it weren't you'd have to
 ```
 Math math = new Math(); x = math.sin(y);
 ```
+-
+
+## Classes/Objects and the Instance/static difference
 
 * if a **variable** is declared **static**
   * all objects of that class can use it.
@@ -236,7 +238,7 @@ How can we model this?
 -
 -
 
-# Objects and Instance Variables
+## Objects and Instance Variables
 * The **new**  keyword is the magic word that tells the JVM to add a new object to the heap.
 * We used **new** back when we created Arrays. That's because an Array object is constructed from the Array **class**
 * We commonly construct **objects** with **new**
@@ -318,47 +320,6 @@ public class BankBalance {
 	private int balance;
 }
 // you can see who owns the account, but not what it's balance is.
-```
--
--
-
-##Implicit and Explicit Parameters
-
-* Objects communicate with each other via the Interfaces, which are the public methods defined in their classes.
-    * **Implicit** - implied though not plainly expressed.
-    * **Explicit** - stated clearly and in detail, leaving no room for confusion or doubt.
-
--
-
-###Implicit and Explicit Parameters
-```
-Public Class SpiderMan extends Hero {
-    // Constructor
-    public SpiderMan( ){…}
-
-    // a method
-    public shootWebAtTarget(Target target) { …. }
-
-    // another method
-    public selectTargetAndShootWeb( ){
-        Target target = new Target( );
-        shootWebAtTarget(target);
-    }
-}
-```
-
--
-###Implicit and Explicit Parameters
-
-* Lets look at the method ***shootWebAtTarget( )*** . This method has two parameters and an Implicit parameter which is the SpiderMan object.
-
-* The SpiderMan object is not explicitly called, but is ***implied*** by the compiler when this program is executed.
-* The target object is ***explicitly*** stated parameter which has to be stated each time the method is called.
-
-```
-SpiderMan toby = new SpiderMan();
-Target badguy = new Target();
-toby.shootWebAtTarget(badguy);
 ```
 -
 -
@@ -695,20 +656,26 @@ static void main(String[] args) { /* do something useful. */ }
 ##Method Parameters
 * **call by value** - means that the method gets just the value that caller provides.
 * **call by reference** - means that the method gets the location of the variable that the caller provides.
-* So what does Java do???
 
 -
 ###Method Parameters
 
 * Java does manipulate objects by reference, and all object variables are references.
 
-* However, Java doesn't pass method arguments by reference; it passes them by value.
-
 -
 
-###Method Parameters
+```
+Person joe = new Person(); // joe is a constructed object.
 
-* The reason for this is that the JVM is always optimizing the Heap. There is no guarantee that the memory block the object is in at one moment, will be the same in the next.
+boss.giveRaise(joe, 100.00);
+
+// inside the boss object we might have
+public void giveRaise(Person emp, float raiseAmount) {
+
+  // emp is a reference to the joe object.
+  emp.salary = emp.salary + raiseAmount;
+}
+```
 
 -
 -
@@ -725,23 +692,7 @@ static void main(String[] args) { /* do something useful. */ }
 * We can guarantee that objects are initialized correctly.
 * Make sure you are thoughtful about what "defaults" we'd like to see within our objects.
 
--
-####Constructors
 
-* Java does manipulate objects by reference, and all object variables are references. However, Java doesn't pass method arguments by reference; it passes them by value.
-
-```
-Person joe = new Person(); // joe is a constructed object.
-
-boss.giveRaise(joe, 100.00);
-
-// inside the boss object we might have
-public void giveRaise(Person emp, float raiseAmount) {
-
-  // emp is a reference to the joe object.
-  emp.salary = emp.salary + raiseAmount;
-}
-```
 
 -
 ##Overloading Methods
@@ -909,8 +860,3 @@ import dc.action.comics.Superman;
 //or
 import dc.man.of.steel.Superman;
 ```
-
--
--
-
-#Live Demo

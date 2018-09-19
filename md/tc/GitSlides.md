@@ -317,3 +317,9 @@ https://git.zipcode.rocks/ZipCodeWilmington/CR-Calcul8r.git
 
 -
 ##We'll cover resolving merge conflicts later.
+
+-
+<img src="/tcuk-slides-light/img/bunnies/rabbits-huddling-together.jpg" >
+
+
+

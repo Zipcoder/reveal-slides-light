@@ -3,8 +3,8 @@
 
 -
 -
-#Streams
-1. What is
+##Streams
+1. What is a Stream?
 2. Usage
 3. Section 8.2 - Stream Creation
 4. Section 8.4 - Extracting Substreams
@@ -19,7 +19,7 @@
 
 -
 -
-#What is a Stream?
+##What is a Stream?
 
 * Basic generalization of lists; a sequence of objects
 * Specify what to be done, rather than how to do it
@@ -30,7 +30,7 @@
 
 -
 -
-#Usage
+##Usage
 ```Java
 // This method definition showcases for-each-loop syntax
 public void forloopPrint(String[] stringArray) {
@@ -59,7 +59,7 @@ public void streamPrint(String[] stringArray) {
 #*Section 8.2*<br>Stream Creation
 
 -
-#From Array, strategy 1
+##From Array, strategy 1
 ```Java
 /** @param stringArray source array to create stream
  *  @return stream representation of this array */
@@ -70,7 +70,7 @@ public Stream<String> fromArray1(String[] stringArray) {
 ```
 
 -
-#From Array, strategy 2
+##From Array, strategy 2
 ```Java
 /** @param stringArray source array to create stream
  *  @return stream representation of this array */
@@ -84,7 +84,7 @@ public Stream<String> fromArray2(String[] stringArray) {
 in the Java Standard Libraries.*
 
 -
-#From varargs
+##From varargs
 ```Java
 /** @return stream representation of this array */
 public Stream<String> fromVarargs() {
@@ -94,7 +94,7 @@ public Stream<String> fromVarargs() {
 ```
 
 -
-#From List
+##From List
 ```Java
 /** @param stringList source list to create stream
 *   @return stream representation of this List */
