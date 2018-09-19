@@ -10,14 +10,14 @@ Java 1.0 was released at Sun World in Beautiful Las Vegas
 
 -
 -
-#Javas is a Platform
+#Java is a Platform
 
 Java is not just a language it is a platform which consists of: 
 
-<p class="fragment fade-up">* Libraries</p>
-<p class="fragment fade-up">* Reusable code</p>
-<p class="fragment fade-up">* Provided services</p>
-<p class="fragment fade-up">* Garbage collection</p>
+<span class="fragment fade-up">* Libraries</span>
+<span class="fragment fade-up">* Reusable code</span>
+<pspan class="fragment fade-up">* Provided services</span>
+<span class="fragment fade-up">* Garbage collection</span>
 
 -
 -
