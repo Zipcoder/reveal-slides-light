@@ -11,16 +11,24 @@
 	}
 	</style>
 	<script src="js/cohort.js"></script>
+	<script>
+		
+	</script>
 </head>
-<body>
+<body onload="checkCookie();">
 	<h1>Links to Lesson Slides by Category</h1>
-	<!-- Add a link to your .html file (based on template.html) in one of the
-	sections below. See commented example for help. -->
-	<!-- <section> <strong>Terminal Essentials</strong>
-		<a href="console.html">Introduction to the Console</a>
+	<section>
+		<strong>Terminal Essentials</strong>
+		<ol>
+			<li><a href="tc-agile-legos.html">Agile Legos</a></li>
+			<li><a href="ShellEtc.html">Shell</a></li>
+			<li><a href="tc-git.html">GIT</a></li>
+		</ol>
+	<!--	<a href="console.html">Introduction to the Console</a>
 		<a href="bash.html">Introduction to Bash Scripting</a>
 		<a href="git.html">Introduction to Version Control with Git</a>
-	</section> -->
+	-->
+	</section>
 	<section>
 		<strong>Tools</strong>
 		<ol>
@@ -29,13 +37,14 @@
 	</section>
 
 	<section> <strong>Core Java</strong>
-		<ol>
-			<li><a href="tc-agile-legos.html" target="_blank">Agile Legos</a></li>
-			<li><a href="ShellEtc.html" target="_blank">Shell</a></li>
-                        <li><a href="tc-git.html" target="_blank">GIT</a></li>
+		<ol id="lectures">
 			<li><a href="historyOfJava.html" target="_blank">History Of Java</a></li>
 			<li><a href="introduction-to-java.html" target="_blank">Introduction to Java</a></li>
-			<li><a href="fundament-programing-stuctures.html" target="_blank">Fundamental programming structures</a></li>
+			<!-- <li><a href="fundament-programing-stuctures.html" target="_blank">Fundamental programming structures</a></li> -->
+			
+			<li><a href="fund-prog-structures-pt1.html" target="_blank">Fundamental Programming Structures (Part 1)</a></li>
+			<li><a href="fund-prog-structures-pt2.html" target="_blank">Fundamental Programming Structures (Part 2)</a></li>
+			<li><a href="fund-prog-structures-pt3.html" target="_blank">Fundamental Programming Structures (Part 3)</a></li>
 			<li><a href="intro-to-oop.html" target="_blank">Introduction to OOP</a></li>
 			<li><a href="java-inheritance.html" target="_blank">Inheritance in Java</a></li>
 			<li><a href="java-inheritance-part-2.html" target="_blank">Inheritance part 2: Polymorphism, Generics, and Reflection</a></li>
@@ -86,6 +95,25 @@
 	<hr>
 	<hr>
 	<a href="template.html" target="_blank">Lecture Template</a>
+	<script>
+		
+    var liList = document.getElementById("lectures").getElementsByTagName("li");
+
+    var largo = liList.length;
+    var currentDayOfLecture = getCookie("currentDayOfLecture");
+
+    currentDayOfLecture = currentDayOfLecture != "" ? currentDayOfLecture : 19;   
+    for(i=0; i < largo; i++) {
+	if (i > currentDayOfLecture) {
+		document.getElementById("lectures").children[i].style.display = "none";
+	}
+	else {
+		document.getElementById("lectures").children[i].style.display = "list-item";
+	}
+	
+   }
+	</script>
+   
 
 </body>
 </html>

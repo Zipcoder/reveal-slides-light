@@ -26,7 +26,7 @@ rental = snazzy;              // All of these are legal;
 ## Polymorphic Program design
 
 <p class="fragment fade-up">- Most methods rely on provided interfaces, rather than underlying implementations</p>
-<p class="fragment fade-up">- Object fields are accessed through getters/setters</>
+<p class="fragment fade-up">- Object fields are accessed through getters/setters</p>
 
 -
 ### Things that don't behave polymorphically

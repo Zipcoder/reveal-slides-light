@@ -112,6 +112,16 @@ Slightly more features than Iterators:
 - Can iterate backward
 - Provides index for previous and next elements
 
+-
+
+##Example: ListIterator
+```
+        final Iterator<Dog> dogIterator = dogs.iterator();
+        while (dogIterator.hasNext()){
+            Dog currentDog = dogIterator.next();
+        }
+
+```
 
 -
 -
@@ -121,9 +131,53 @@ Slightly more features than Iterators:
 - No storage functionality
 - Produce subset, empty, singleton, or unmodifiable Collections
 
+
+-
+##Example: Empty Views
+```
+    List<String> clearList = Collections.emptyList();
+    Set<String> clearSet = Collections.emptySet();
+    Map<String, Integer> clearMap = Collections.emptyMap();
+    
+```
+-
+##Example: Views of Single Objects
+```
+
+    //View of Single Object
+    List<String> oneList = Collections.singletonList("elem");
+    Set<String> oneSet = Collections.singleton("elem");
+    Map<String, Integer> oneMap = Collections.singletonMap("one", 1);
+    
+    //Single Object 9 times:
+    List<String> nTimesList = Collections.nCopies(9, "elem");
+    
+```
+-
+##Example: View of an Array
+
+```
+    String[] monthArray = new String[12];
+    List<String> monthList = Arrays.asList(monthArray);
+    //another way to build
+    List<String> months = Arrays.asList("July", "August");
+        
+```
+-
+##Example: View of portion of a List
+```
+    List<String> nextThree = nTimesList.subList(5, 8);
+
+```
+
 -
 -
 ## Utility Classes
 
 - [Collections](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html)
 - [Arrays](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html)
+
+
+
+-
+<img src="/tcuk-slides-light/img/bunnies/baby-bunnies.jpg">
