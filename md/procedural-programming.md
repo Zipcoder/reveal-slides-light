@@ -114,7 +114,7 @@ Literal values of type char are enclosed in single quotes.
 '8' is NOT 8 // one is a char, the other an int
 ```
 
-Values of type char can be expressed as hexadecimal values that run from \u0000 to \uFFFF
+Values of type char can be expressed as unicode values that run from \u0000 to \uFFFF
 
 -
 
@@ -363,6 +363,30 @@ b--;             // now b is 13
 int k = b - 1;   // b is 13, k is 12
 ```
 
+-
+
+##Big Numbers
+
+If the precision of the basic integer and floating-point types is not sufficient, you can turn to a couple of handy classes in the java.math package: BigInteger and BigDecimal.
+
+```
+BigInteger a = BigInteger.valueOf(100456000);
+
+BigInteger b = BigInteger("100000049857984759084730957497594");
+
+BigInteger secretKey = BigInteger(256, Random(12345678907890))
+```
+
+-
+
+you cannot use the familiar mathematical operators such as + and * to combine big numbers
+
+```
+BigInteger c = a.add(b); // c = a + b
+BigInteger d = c.multiply(b.add(BigInteger.valueOf(2))); // d = c * (b + 2)
+```
+
+-
 -
 
 ###Relational and boolean Operators
@@ -750,29 +774,6 @@ while (sum < goal)
     if (n < 0) continue;
     sum += n; // not executed if n < 0
 }
-```
-
--
-
-##Big Numbers
-
-If the precision of the basic integer and floating-point types is not sufficient, you can turn to a couple of handy classes in the java.math package: BigInteger and BigDecimal.
-
-```
-BigInteger a = BigInteger.valueOf(100456000);
-
-BigInteger b = BigInteger("100000049857984759084730957497594");
-
-BigInteger secretKey = BigInteger(256, Random(12345678907890))
-```
-
--
-
-you cannot use the familiar mathematical operators such as + and * to combine big numbers
-
-```
-BigInteger c = a.add(b); // c = a + b
-BigInteger d = c.multiply(b.add(BigInteger.valueOf(2))); // d = c * (b + 2)
 ```
 
 -
