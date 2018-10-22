@@ -299,7 +299,7 @@ https://www.github.com
 
 -
 ##Fork this repo
-https://git.zipcode.rocks/ZipCodeWilmington/CR-Calcul8r.git
+https://git.zipcode.rocks/Cohort4.2/CR-Calcul8r.git
 
 -
 ##Open the project in BlueJ

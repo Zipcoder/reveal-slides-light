@@ -27,7 +27,10 @@
 
 -
 -
-## Other commands worth knowing
+### Other commands worth knowing
+<p class="fragment fade-up">**clear** - clear the terminal's display </p>
+<p class="fragment fade-up">**[control]-c** - get a new terminal prompt</p>
+
 <p class="fragment fade-up">**head** - display the first lines of a file</p>
 <p class="fragment fade-up">**tail** - display the last lines of a file</p>
 
