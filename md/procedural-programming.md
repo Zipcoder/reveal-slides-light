@@ -497,82 +497,6 @@ means
 `a += (b += c)`
 
 -
-
-###Enumerated Types
-
-You can define your own enumerated type
-
-`enum Size { SMALL, MEDIUM, LARGE, EXTRA_LARGE };`
-
-Now you can declare variables of this type:
-
-`Size s = Size.MEDIUM;`
-
--
-```
-enum Weekday { MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY };
-
-enum SensorStatus { OFF, ON, RESET, UNKNOWN };
-```
-
--
--
-
-##Input and Output
-
--
-
-###Reading Input
-
-To read console input, you first construct a Scanner that is attached to System.in
-
-```
-Scanner in = new Scanner(System.in);
-
-System.out.print("What is your name? ");
-String name = in.nextLine();
-```
-```
-String firstName = in.next(); //read a single word
-```
-
--
-
-```
-System.out.print("How old are you? ");
-int age = in.nextInt();
-```
-
-Similarly, the nextDouble method reads the next floating-point number.
-
--
-
-###File Input and Output
-
-To read from a file, construct a Scanner object
-
-```
-Scanner in = new Scanner(Paths.get("myfile.txt"), "UTF-8");
-```
-If the file name contains backslashes, remember to escape each of them with an additional backslash: "c:\\\\mydirectory\\\\myfile.txt". (yes, really)
-Because: "c:\\\\mydirectory\\\\myfile.txt" gives you "c:\\mydirectory\\myfile.txt"
-
--
-
-To write to a file, construct a PrintWriter object.
-
-```
-PrintWriter out = new PrintWriter("myfile.txt", "UTF-8");
-```
-
-If the file does not exist, it is created.
-
--
-
-String dir = System.getProperty("user.dir");
-
-dir now holds the User's working directory => "/Users/jose"
--
 -
 
 ##Control Flow
@@ -775,6 +699,64 @@ while (sum < goal)
     sum += n; // not executed if n < 0
 }
 ```
+
+-
+-
+
+##Input and Output
+
+-
+
+###Reading Input
+
+To read console input, you first construct a Scanner that is attached to System.in
+
+```
+Scanner in = new Scanner(System.in);
+
+System.out.print("What is your name? ");
+String name = in.nextLine();
+```
+```
+String firstName = in.next(); //read a single word
+```
+
+-
+
+```
+System.out.print("How old are you? ");
+int age = in.nextInt();
+```
+
+Similarly, the nextDouble method reads the next floating-point number.
+
+-
+
+###File Input and Output
+
+To read from a file, construct a Scanner object
+
+```
+Scanner in = new Scanner(Paths.get("myfile.txt"), "UTF-8");
+```
+If the file name contains backslashes, remember to escape each of them with an additional backslash: "c:\\\\mydirectory\\\\myfile.txt". (yes, really)
+Because: "c:\\\\mydirectory\\\\myfile.txt" gives you "c:\\mydirectory\\myfile.txt"
+
+-
+
+To write to a file, construct a PrintWriter object.
+
+```
+PrintWriter out = new PrintWriter("myfile.txt", "UTF-8");
+```
+
+If the file does not exist, it is created.
+
+-
+
+String dir = System.getProperty("user.dir");
+
+dir now holds the User's working directory => "/Users/jose"
 
 -
 -
