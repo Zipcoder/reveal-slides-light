@@ -97,11 +97,11 @@ public class Main{
 }
 ```
 
--
+- 
 ### Primitives and autoboxing
 
 **Autoboxing** is the automatic conversion the compiler makes between primitive types and their corresponding wrapper classes. 
-Converting an int to an Integer or a double to a Double, for example. Converting in the opposite direction is called **unboxing**.
+Converting an **int** to an **Integer** or a **double** to a **Double**, for example. Converting in the opposite direction is called **unboxing**.
 
 -
 ### Primitives and autoboxing
