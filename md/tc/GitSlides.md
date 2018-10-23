@@ -212,10 +212,13 @@ Next, you run `git branch -a` to see exactly what branches exist on this compani
 
 -
 ##A few More Useful commands
-*`git reset --hard` , to revert your local repository to the last committed version.
-*`git remote -v` , to see the remote aliases attached to your local clone.
-*`git remote add <aliasname> <repourl>` , to add a new repo alias.
-*`git revert <commitId>`, to revert to a committed version by id.
+
+* `git reset --hard` , to revert your local repository to the last committed version.
+* `git remote -v` , to see the remote aliases attached to your local clone.
+* `git remote add <aliasname> <repourl>` , to add a new repo alias.
+* `git revert <commitId>`, to revert to a committed version by id.
+
+
 -
 -
 ## Merge Conflicts
