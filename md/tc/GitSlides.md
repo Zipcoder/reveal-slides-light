@@ -210,7 +210,13 @@ Next, you run `git branch -a` to see exactly what branches exist on this compani
 * `git checkout master`
 * `git merge {branchname}`
 
+-
+##A few More Useful commands
 
+* `git reset --hard` , to revert your local repository to the last committed version.<br>
+* `git remote -v` , to see the remote aliases attached to your local clone.<br>
+* `git remote add <aliasname> <repourl>` , to add a new repo alias.<br>
+* `git revert <commitId>`, to revert to a committed version by id.<br>
 
 
 -
@@ -317,6 +323,13 @@ https://git.zipcode.rocks/Cohort4.2/CR-Calcul8r.git
 
 -
 ##We'll cover resolving merge conflicts later.
+
+-
+## Please watch the following tutorials
+
+* Watch: [1.1 Meet Git](https://youtu.be/-XmpLT30Xl0)
+* Watch: [1.2 The three-fold model](https://youtu.be/pYwoIy97VBY)
+* Watch: [1.3 Being selective with Git](https://youtu.be/onaXtpgS0R0)
 
 -
 <img src="/tcuk-slides-light/img/bunnies/rabbits-huddling-together.jpg" >
