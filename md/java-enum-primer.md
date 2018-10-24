@@ -30,7 +30,7 @@ public enum Size
 
 All enumerated types are subclasses of the class Enum. They inherit a number of methods from that class.
 
-`Size.SMALL.toString()` gives "S"
+`Size.SMALL.toString()` gives "SMALL"
 
 conversely
 
