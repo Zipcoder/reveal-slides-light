@@ -131,11 +131,11 @@ Linear search is rarely used practically because other search algorithms, (such 
 ##Binary Search
 Suppose you’re searching for a person in the phone book (what an old-fashioned sentence!). Their name starts with K.
 
-Would you start at the beginning or would you jump to the middle?
-    Facebook login: 
-        -Search username database.
-        -Your name is karlmegeddon
-    How would you solve these search problems: binary search
+Would you start at the beginning or would you jump to the middle?<br>
+    *Facebook login: <br>
+        *Search username database.<br>
+        *Your name is karlmegeddon<br>
+    *How would you solve these search problems? binary search
 
 -
 -
