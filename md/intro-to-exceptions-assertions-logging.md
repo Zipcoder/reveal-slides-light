@@ -44,6 +44,9 @@
 <p class="fragment fade-up">* The `Error` hierarchy describes internal errors and resource exhaustion situations.</p>
 <p class="fragment fade-up">* Do not advertise internal java errors; Any code can potentially throw an `Error`.</p>
 <p class="fragment fade-up">* `IOError`, `StackOverflowError`, and `OutOfMemoryError` are a few of the commonly encountered `Errors`</p>
+
+-
+###Errors (Continued)
 <p class="fragment fade-up">	* `IOError` - serious I/O error has occurred</p>
 <p class="fragment fade-up">	* `StackOverflowError` - application recurses too deeply.</p>
 <p class="fragment fade-up">	* `OutOfMemoryError` - JVM cannot allocate an object because it is out of memory</p>
