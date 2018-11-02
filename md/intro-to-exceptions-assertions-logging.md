@@ -551,5 +551,6 @@ public class LogDemo {
 }
 ```
 -
-<img src="/tcuk-slides-light/img/bunnies/f71e7c464445db9da347def01636a281.jpg">
+<img src="/reveal-slides-light/img/bunnies/bunnies-log.jpg">
+
 
