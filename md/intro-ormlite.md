@@ -7,7 +7,7 @@
 
 Persistence simply means that we would like our application’s data to outlive the applications process
 
-_
+-
 
 ## How do we save save data?
 
@@ -48,7 +48,7 @@ _
 
 The four basic functions that models should be able to do, at most.
 
-_
+-
 
 When we are building APIs, we want our models to provide four basic types of functionality.
 
