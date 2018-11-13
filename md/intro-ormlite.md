@@ -275,4 +275,10 @@ results = accountDao.queryRaw(qb.prepareStatementString());
 
 ## Foriegn Objects
 
-TB/NTB
+where one or more of the fields correspond to an object are persisted in another table in the same database
+
+-
+
+## Foreign Object Collections
+
+ A foreign collection allows you to add a collection of orders on the account table
