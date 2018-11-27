@@ -32,7 +32,7 @@ The Spring Framework IoC (Inversion of Control) container handles Dependency Inj
 - default in `@SpringBootApplication`
 
 -
-from [Spring Boot Reference Guide]():
+from [Spring Boot Reference Guide](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using-boot-using-springbootapplication-annotation):
 
 ```Java
 package com.example.myproject;
