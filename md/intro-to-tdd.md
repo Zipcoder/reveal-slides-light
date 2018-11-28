@@ -1,5 +1,4 @@
-#Introduction to TDD
-
+#Introduction to Test Driven Development (TDD)
 
 
 -
@@ -10,71 +9,70 @@
 
 You may not write production code until you have a written a failing corresponding unit test.
 
-```
-	public class cow{
-		public cow(){}
-		
+```java
+	// This code has no unit test yet. It shouldn't be implemented
+	// There is no way for anyone to see if this code is working
+	// as intended or if there is a mistake
+	public class Cow{
 		public String speak(){
-			//BAD DOBBY
 			return "Mooooow";
 		}
 	}
-
 ```
 
 -
 -
-###First Law
+###Second Law
 
-You may not write production code until you have a written a failing corresponding unit test.
+You may not write more of a unit test than is needed to fail
 
-```
-public class cow{
-	public cow(){}
-	
-	public String speak(){
-		//Good DOBBY
-		return null;
-	}
-}
+```java
+public class CowTest{
 
-```
--
-
-```
-public class cowTest{
-	
+	// This is a good test but will not compile
 	@Test
 	public void speakTest(){
 		Cow cow = new Cow();
-		String expected = "mooo";
+		String expected = "Moo";
+		// The speak method does not exist yet
 		String actual = cow.speak();
 		Assert.equals(expected, actual);
 	}
 }
 ```
+
 -
-#3 laws of TDD
 
-###Second Law
+Get the code compiling
 
-You may not write more of a unit test than is needed to fail, and not compiling is failing.
+```java
+public class Cow{
+	public Cow(){}
+
+	// Create the speak method to get the project compiling
+	public String speak(){
+		return null;
+	}
+}
 
 ```
-@Test
-public void speakTest(){
-	Cow cow = new Cow();
-	Cow cow2 = new Cow();
-	
-	String expected = "mooo";
-	String actual = cow.speak();
-	
-	String expected2 = "mooo";
-	String actual2 = cow2.speak();
-	Assert.equals(expected2, actual2);
-	// BAD DOBBY
-	Assert.equals(actual, actual2);
-}
+
+-
+
+As of now that test will fail. We are expecting cow to say `Moo` but when we call speak it returns `null`.
+
+-
+
+Now that we have a failing test we can write some production code
+
+```java
+	public class Cow{
+		public String speak(){
+			// Code now written to pass the test
+			return "Moo";
+		}
+	}
+
 ```
 
 -
@@ -82,13 +80,18 @@ public void speakTest(){
 
 ###Third Law
 
-You may not write more production code than is sufficent to pass current failing test.
+You may not write more production code than is sufficent to pass the current failing test.
 
-```
+```java
 public String speak(){
-	String sound = "Mooooo";
-	//BAD DOBBY!!!!
-	String bucketsOfMilk = this.milkMe();
+	if(cow.getSize() > 5)
+		String sound = "MOOO";
+	else
+		String sound = "Moo"
+
+	// While this will pass our test, it includes a case we haven't 
+	// tested for. Before writing our if statement, we should first 
+	// write a test with a large cow and a normal cow speaking. 
 	return sound;
 }
 ```
@@ -98,36 +101,77 @@ public String speak(){
 
 #Clean Code and Clean Test
 
-A clean test is a readable Test
+A clean test is a readable Test. Your test is your code!
 
-```
+```java
 @Test
 public void testFunction(){
-//Bad Dobby
-Unicorn unico = New Unicorn();
-int x = 23;
-int y = unico.saveThePrincess();
-Assert.equals(x,y);
+	// While this test technically works, it is unorganized
+	// It also doesn't explain what each variable is doing
+	Unicorn unico = New Unicorn();
+	int x = 23;
+	int y = unico.saveThePrincess();
+	Assert.equals(x,y);
 }
 
 ```
 
 -
-```
+```java
 @Test
 public void testCountToTwo(){
-//Good Dobby
-Unicorn unico = New Unicorn();
-int expectedNumber = 2;
-int actualNumber = unico.countToTwo();
-Assert.equals(expectedNumber, actualNumber);
+	//Here we know what we are given
+	Unicorn unico = New Unicorn();
+	// Here we know what our result should be
+	int expectedNumber = 2;
+	// Here we know this is what we actually got
+	int actualNumber = unico.countToTwo();
+	// With the variables named properly we can now
+	// read this as "Assert that the expected number 
+	// and actual number are equal"
+	Assert.equals(expectedNumber, actualNumber);
 }
 ```
 -
 -
-#One Assertion to Rule them All
+## One test one case
 
-A good unit test should only come to one binary conclusion , which should also be quick and easy to understand. **SINGLE RESPONSIBLITY**
+A good unit test should only test for one method and often one case. If you have if statements in your method that require multiple assertions to get to, then you will usually split those cases up into separate methods
+
+-
+
+```java
+@Test
+public void testSpeakLargeCow(){
+	Cow cow = new Cow();
+	// Make the cow large
+	cow.setSize(9)
+	// Large cows should say MOO
+	String expected = "MOO";
+	// What does the fox, err, cow say?
+	String actual = cow.speak();
+
+	Assert.equals(expected, actual);
+}
+```
+
+```java
+@Test
+public void testSpeakSmallCow(){
+	Cow cow = new Cow();
+	// Make the cow small
+	cow.setSize(3)
+	String expected = "Moo";
+
+	// Test runs the same method but has a different
+	// expectation because the parameters of the test
+	// are different. This ensures line coverage
+	String actual = cow.speak();
+	Assert.equals(expected, actual);
+}
+```
+
+-
 
 Single Concept per test
 
@@ -139,12 +183,8 @@ Single Concept per test
 -
 #F.I.R.S.T
 
-* **F** is for **fast** - The test should be fast. If its going to fail lets get it over with.
-* **I** is for **Independent** - every test is an island a "LONELY ISLAND". The the test should not have to fire off other methods to complete itself.
-* **R** is for **Repeatable** - every test should be able to run in any environment , local, QA, and Production.
-* **S** is for **Self-Validating** - every test should have a binary boolean output pass or fail.
-* **T** is for **Timely** - test should be written FIRST... OR ELSE!!! 
-
--
--
-<img src="/reveal-slides-light/img/bunnies/cute-rabbit-2.jpg" >
+* **F** is for **fast** - The test should be fast.
+* **I** is for **Independent** - Executing a test should not effect any other tests
+* **R** is for **Repeatable** - When a test is provided input, it should return the same output no matter where it is run
+* **S** is for **Self-Validating** - No manual input should be required to see if a test passes or fails
+* **T** is for **Timely** - Tests should be written first and should consider most if not all use cases of your program

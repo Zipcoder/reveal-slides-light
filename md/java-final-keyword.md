@@ -26,7 +26,3 @@ public class Foo{
 - final object references cannot be changed but the underlying object can  
 - blank final fields must be initialized in every constructor
 - `final` != `finally` -- these are two different keywords
-
--
-<img src="/tcuk-slides-light/img/bunnies/Baby-and-Mama-Rabbit-Nose-to-Nose.jpg" >
-

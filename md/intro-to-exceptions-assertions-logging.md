@@ -44,9 +44,6 @@
 <p class="fragment fade-up">* The `Error` hierarchy describes internal errors and resource exhaustion situations.</p>
 <p class="fragment fade-up">* Do not advertise internal java errors; Any code can potentially throw an `Error`.</p>
 <p class="fragment fade-up">* `IOError`, `StackOverflowError`, and `OutOfMemoryError` are a few of the commonly encountered `Errors`</p>
-
--
-###Errors (Continued)
 <p class="fragment fade-up">	* `IOError` - serious I/O error has occurred</p>
 <p class="fragment fade-up">	* `StackOverflowError` - application recurses too deeply.</p>
 <p class="fragment fade-up">	* `OutOfMemoryError` - JVM cannot allocate an object because it is out of memory</p>
@@ -398,11 +395,6 @@ public class FilePrinterTest {
 
 
 -
-<img src="/tcuk-slides-light/img/exceptions/finally.JPG">
-
-
-
--
 ###Decoupling `finally` clause from `try/catch` clauses
 ```Java
 class BookExample {
@@ -447,8 +439,8 @@ class BookExample {
 -
 ###Assertions
 <p class="fragment fade-up">* Assertions are commonly used idiom of defensive programming.</p>
-<p class="fragment fade-up">* Java has a keyword `assert`, which takes two forms:<br>
-	1. `assert condition;`<br>
+<p class="fragment fade-up">* Java has a keyword `assert`, which takes two forms:
+	1. `assert condition;`
 	2. `assert condition : expression;`</p>
 <p class="fragment fade-up">* `assert` evaluates a condition, then throws an `AssertionError` if it is false. The second argument _expression_ is a message String.</p>
 
@@ -459,19 +451,6 @@ class BookExample {
 <p class="fragment fade-up">* Assertions can be enabled by running the program with the `-ea` option.</p>
 <p class="fragment fade-up">* `java -ea MyProject` enables for entire project</p>
 <p class="fragment fade-up">* `java -ea:MyClass -ea:com.zipcodewilmington.MyProject` enables for `MyClass`</p>
-
-
--
-##Toggling Assert Statements with IntelliJ
--
-<img src="/tcuk-slides-light/img/exceptions/logging_screenshot01.png">
--
-<img src="/tcuk-slides-light/img/exceptions/logging_screenshot02.png">
--
-<img src="/tcuk-slides-light/img/exceptions/logging_screenshot03.png">
--
-<img src="/tcuk-slides-light/img/exceptions/logging_screenshot05.png">
-
 
 -
 ###When To Use
@@ -529,11 +508,6 @@ class BookExample {
 * `FINEST` lowest
 
 -
-##Setting Log Options with IntelliJ
-
-<a href="https://www.jetbrains.com/help/idea/setting-log-options.html" target="_blank">https://www.jetbrains.com/help/idea/setting-log-options.html</a>
-
--
 ###Syntax
 ```
 public class LogDemo {
@@ -551,6 +525,4 @@ public class LogDemo {
 }
 ```
 -
-<img src="/reveal-slides-light/img/bunnies/bunny-grey-log.jpg">
-
-
+<img src = 'https://i.pinimg.com/originals/f7/1e/7c/f71e7c464445db9da347def01636a281.jpg'>

@@ -4,34 +4,38 @@
 
 ### Introduction to Object-Oriented Programming
 
-* Yesterday, you learned about procedural programming, which has its place in the world.
-* However, the bigger the problems get, the harder it is to manage the code base.
+* Yesterday you had a lecture on procedural programming, which has its place in the world.
+* The issue the bigger the problems get, the harder it is to manage the code base.
 
 -
 
 
-### Object-Oriented Programming:
+### Introduction to Object-Oriented Programming
 
-* Breaks the problem down into small logical objects, each having a **single responsibility**
-* Is an easier way of managing larger problems
+* Breaking the problem down into small logical objects
+  * each having a single responsibility
+* An easier way of managing larger problems
 * Provides scalability of solutions over time.
+
 * Allows for greater testability of code.
-* Makes program easier to read, understand, and debug.
+
+* Makes program easier to read understand, and debug.
 
 -
 -
 # Object
-* An **Object** is the fundamental unit of OOP
-* **EVERYTHING** is an an Object.
-* Sometimes, Java Objects model real-world objects, such as:
-  * a Car, Truck,
-  * a Person, an Address, a Printer, a Disk
-  * a BankAccount, a TaxReturn, a JavaStudent
+* an **Object** is the fundamental unit of OOP
+* EVERYTHING is an an Object.
+* Sometimes, Java Objects model real-world objects.
+
+* a Car, Truck,
+* a Person, an Address, a Printer, a Disk
+* a BankAccount, a TaxReturn, a JavaStudent
 
 -
 # Object
 
-All **OBJECTS** have:
+All **OBJECTS** have
 
 * **Identity** - how that object is distinguished from other objects of the same type. **What's its name?**
 * **State** - the value of the internal objects this object contains. **What does it store?**
@@ -41,38 +45,34 @@ All **OBJECTS** have:
 
 # Classes
 
-* A **Class** is a template/blueprint for Objects
+* **Class** is template/blueprint for Objects
 * You **construct objects from a specific class**
 * The **object** you constructed is an **instance of that class** or an OBJECT INSTANCE
 
 * Java has **thousands** of classes in its Standard library
-* You've used `System.out` object which is an instance of the `java.io.PrintStream` class
+* you've used `System.out` object which is an instance of the `java.io.PrintStream` class
 
 -
 # Writing a Class
 
-* In Java, you basically write/debug/test Java classes all day long.
+* IN Java, you basically write/debug/test Java classes all day long.
 * When you run a Java program, it creates Objects which do useful (we hope) things
-* When it doesn't, you edit a class and run/test it again - often repeatedly
+* when it doesn't, you edit a class and run/test it again - forever sometimes
+
+* create **variables** to store State
+* write **methods** to describe Behavior
+* write **constructors** to construct and initialize an Object and give it an Id
+* write **tests** that test the objects and make sure they do what you want
 
 -
-# Writing a Class (continued)
-* Create **variables** to store State
-* Write **methods** to describe Behavior
-* Write **constructors** to construct and initialize an Object and give it an Id
-* Write **tests** that test the objects and make sure they do what you want
-
--
-## Example Class
+# Example Class
 
 BigBossSays
 
 * I need an object which stores a person's name and age.
 * I need to get their name and age as a single string.
-* All the persons should be kept separate in different objects.
+* And all the persons should be kept separate in different objects.
 
--
-## Example Class (continued)
 `file Person.java`
 ```Java
 public class Person {
@@ -95,22 +95,21 @@ public class Person {
 
 -
 
-## Classes/Objects and the Instance/static difference
-* If a **method** is declared **static**
+# Classes/Objects and the Instance/static difference
+
+* if a **method** is declared **static**
   * you do not need to create an object to call it.
   * e.g. Math.sin(x);
+
   * if it weren't you'd have to
 ```
 Math math = new Math(); x = math.sin(y);
 ```
--
 
-## Classes/Objects and the Instance/static difference
-
-* If a **variable** is declared **static**
+* if a **variable** is declared **static**
   * all objects of that class can use it.
   * `private static long lastSerialNumber`
-  * every time an object is constructed, you increment and assign value to an instance variable `serialNumber`
+  * every time an object is constructed, you increment and assign to an instance variable `serialNumber`
 
 -
 -
@@ -122,25 +121,25 @@ Math math = new Math(); x = math.sin(y);
 -
 ## Objects are services
 
-The objective of **Object-oriented programming** is having objects providing services to other objects via messages or calling their public methods.
+The objective of **Object oriented programming** is having objects providing services to other objects via messages or calling their public methods.
 
 -
 
 ## Single Responsibility
 
 * How an object completes the task that it is asked to do is no one's business but its own.
-* The only thing that the asking object cares about is the correct answer; how that answer is generated is irrelevant. Hence, **Single Responsibility**.
+* The only thing that the asking object cares about is the correct answer; how that answer is generated is irrelevant. Hence, Single Responsibility.
 
 -
 
-## Single Responsibility (continued)
+## Single Responsibility
 
 * Think about a printer in an office. Do you care how the printer works, or do you only care about the documents you asked it to make?
 
 * It's not your job to print the documents, so you don’t need to or care about how it's done. Only that it gets done.
 
 -
-## Single Responsibility (continued)
+## Single Responsibility
 
 * That's the major premise behind encapsulation,  how an object implements the tasked asked of it, is on a need-to-know basis.
 
@@ -154,13 +153,13 @@ The objective of **Object-oriented programming** is having objects providing ser
 1. Object methods should only be able to change and interact with instance variables.
 
 2. ObjectA can only interact with ObjectB by calling ObjectB's methods.
-  * don't just reach in and change another object's variables. Just **Don't**.
+  * don't just reach in and change another object's variables. Just Don't.
 
 * This way, you can control the probability of unintended bugs in the future.
 
 -
 
-## Defense (continued)
+## Defense
 
 * The value of this is you have the flexibility of changing how a class produces or implements an action, without directly effecting the other classes in the program. It also allows for you to write clear and comprehensive tests for every intended action that an object could be expected to do.
 
@@ -176,10 +175,10 @@ As stated before, all objects have 3 major parts:
 
 -
 ## Proper names
-* Objects should be named after nouns,
-  <br>e.g. Car
-* Methods should be associated with "action" verbs,
-  <br>e.g. start()
+* Objects should be named after nouns
+  e.g. Car
+* Methods should be associated with "action" verbs.
+  e.g. start()
 
 * Never write a method named **mightPossiblyDoSomethingUsefulIfYouAskNicely()**
 -
@@ -195,7 +194,7 @@ As stated before, all objects have 3 major parts:
 
 * Objects are containers. Each has its own "state"
 * Each employee works slightly different hours each week.
-* However, they all "punch in" on a single time-clock on the wall each with a different time-card.
+* But they all "punch in" on a single time-clock on the wall each with a different time-card.
 
 How can we model this?
 
@@ -208,9 +207,9 @@ How can we model this?
 
 ## Relationships between Classes
 
-* For the `TimeCard` object to function properly, it needs the `TimeClock` object to be created and in scope.
+* For the TimeCard object to function properly, it needs the TimeClock object to be created and in scope.
 
-* `Employee` and `TimeClock` can exist and function without knowledge of `TimeCard`.
+* Employee and TimeClock can exist and function without knowledge of TimeCard.
 
 -
 -
@@ -224,21 +223,21 @@ How can we model this?
 
 * Programs by nature should avoid complexity, so keep things as simple as possible.
 
-* The objects that you create, and the objects that you use should have a **SINGLE-RESPONSIBLITY**. They should have one task to do, and do it well.
+* The objects that you create, and the objects that you use should have a SINGLE-RESPONSIBLITY. They should have one task to do, and do it well.
 
 * Complexity is achieved by creating container classes, which are comprised of simple objects working together to achieve one objective.
 
 -
 ## Inheritance
-* **Inheritance** (“is-a”) - this relationship is **polymorphic** in nature. This relationship is about what the object is extended from.
+* **Inheritance** (“is-a”) - this relationship is polymorphic in nature this relationship talks about what the object is extended from.
 
-* Remember that all objects in Java are extended from **Object.class** except for primitives.
+* Remember that all objects in java are extended from **Object.class** except for primitives.
 
 -
 -
 
-## Objects and Instance Variables
-* The **new**  keyword is the magic word that tells the **JVM** to add a new object to the heap.
+# Objects and Instance Variables
+* The **new**  keyword is the magic word that tells the JVM to add a new object to the heap.
 * We used **new** back when we created Arrays. That's because an Array object is constructed from the Array **class**
 * We commonly construct **objects** with **new**
 * Each object has its OWN copies of the 'instance variables'.
@@ -312,7 +311,7 @@ LocalDate tomorrow = today.plusDays(1);
     * Private
     * Protected
     * Default
-* This allows us to open up or hide different things inside an object.
+* this allows us to open up or hide different things inside an object.
 ```
 public class BankBalance {
 	public String owner;
@@ -323,17 +322,58 @@ public class BankBalance {
 -
 -
 
+##Implicit and Explicit Parameters
+
+* Objects communicate with each other via the Interfaces, which are the public methods defined in their classes.
+    * **Implicit** - implied though not plainly expressed.
+    * **Explicit** - stated clearly and in detail, leaving no room for confusion or doubt.
+
+-
+
+###Implicit and Explicit Parameters
+```
+Public Class SpiderMan extends Hero {
+    // Constructor
+    public SpiderMan( ){…}
+
+    // a method
+    public shootWebAtTarget(Target target) { …. }
+
+    // another method
+    public selectTargetAndShootWeb( ){
+        Target target = new Target( );
+        shootWebAtTarget(target);
+    }
+}
+```
+
+-
+###Implicit and Explicit Parameters
+
+* Lets look at the method ***shootWebAtTarget( )*** . This method has two parameters and an Implicit parameter which is the SpiderMan object.
+
+* The SpiderMan object is not explicitly called, but is ***implied*** by the compiler when this program is executed.
+* The target object is ***explicitly*** stated parameter which has to be stated each time the method is called.
+
+```
+SpiderMan toby = new SpiderMan();
+Target badguy = new Target();
+toby.shootWebAtTarget(badguy);
+```
+-
+-
+
 ##Benefits of encapsulation
 * Life is full of enough problems, lets avoid them in our programs. We do that by making things as simple as possible. **Simplicity is your friend!**
 
 -
-###Benefits of encapsulation (continued)
+###Benefits of encapsulation
 
 * There is already a possibility of the logic we create being flawed, which would result in errors or unintended results. Encapsulation can’t save us from the issues with our own personal logic, but it can help us avoid issues from unintended side effects of other objects.
 
 -
 ##Single-Responsiblity
-* **Single-Responsiblity**:  When you are defining your objects, think about the nature of that object. Let's think about a program that Controls an ATM. Here are the objects that exist in the program:
+* **Single-Responsiblity**:  when you are defining your objects think about the nature of that object. Lets think about a program that Controls a ATM. Here are the objects that exist in the program:
 
 	* Bank
 	* User
@@ -366,13 +406,13 @@ public class BankBalance {
 
 * It makes the most sense for the **User** to ask the **Bank** for the money. Even though the **UserAccount** is dependent on the **User** object, the **User** object is not dependent on the **UserAccount**.
 
-* So since it's not dependent on it, it has no reason to know it even exists. In the real world, the **User** would ask the Bank or the Automated Teller Machine at the bank for money.
+* So since its not dependent on it, it has no reason to know it even exists. In the real world, the **User** would ask the Bank or the Automated Teller Machine at the bank for money.
 
 -
 
 ####So who should the User ask for the Money?
 
-* For the **Bank** to decide if they can provide the **User** with the money the **User** is asking for, it is dependent on the **UserAccount** object. The **Bank** must ask the **UserAccount** object if there is enough money in it.
+*For the **Bank** to decide if they can provide the **User** with the money the **User** is asking for, it is dependent on the **UserAccount** object. The **Bank** must ask the **UserAccount** object if there is enough money in it.
 
 -
 
@@ -393,7 +433,7 @@ public class BankBalance {
 
 ##Encapsulation
 
-* **Encapsulation** comes in here! The field inside of **UserAccount** called **dollars** will be set to private. Only the **UserAccount** will have access to **mutate** that field and change the amount. **SINGLE RESPONSIBILITY**.
+* **Encapsulation** comes in here! The field inside of **UserAccount** called **dollars** will be set to private. Only the **UserAccount** will have access to Mutate that field and change the amount. **SINGLE RESPONSIBILITY**.
 
 -
 
@@ -497,7 +537,7 @@ public String canIBorrowMoney(Person person, Double amount ){
 -
 
 ##First rule of programming
-* **EVERYONE ELSE IS STUPID!!!!** If you don’t explicitly stop someone from doing something, they will eventually do it, using YOUR code to do it.
+* **EVERYONE ELSE IS STUPID!!!!** If you don’t explicitly stop someone from doing something, they will eventually do it. Using your code to do it.
 
 -
 
@@ -616,7 +656,7 @@ private static final Float pi = 3.14159;
 -
 -
 ##Static Methods
-* Static methods are also sometimes referred to as factory methods. They are methods that do not do any direct operations on an object.
+* Static methods are also sometimes referred to and factory methods. They are methods that do not do any direct operations on an object.
 
 ```
 public class Calculator {
@@ -655,13 +695,40 @@ static void main(String[] args) { /* do something useful. */ }
 ##Method Parameters
 * **call by value** - means that the method gets just the value that caller provides.
 * **call by reference** - means that the method gets the location of the variable that the caller provides.
+* So what does Java do???
 
 -
 ###Method Parameters
 
 * Java does manipulate objects by reference, and all object variables are references.
 
+* However, Java doesn't pass method arguments by reference; it passes them by value.
+
 -
+
+###Method Parameters
+
+* The reason for this is that the JVM is always optimizing the Heap. There is no guarantee that the memory block the object is in at one moment, will be the same in the next.
+
+-
+-
+
+##Object Construction  
+* Objects are containers, the objects we use and create are composed of other objects.
+* As stated before, we are in an eternal struggle to avoid null objects.
+* Object oriented programming is objects talking to other objects: if we send a message to an object that doesn’t exist, our programs will fail.
+
+-
+###Constructors
+* This is where constructors come in.
+* We use constructors to control the creation of our objects
+* We can guarantee that objects are initialized correctly.
+* Make sure you are thoughtful about what "defaults" we'd like to see within our objects.
+
+-
+####Constructors
+
+* Java does manipulate objects by reference, and all object variables are references. However, Java doesn't pass method arguments by reference; it passes them by value.
 
 ```
 Person joe = new Person(); // joe is a constructed object.
@@ -677,28 +744,11 @@ public void giveRaise(Person emp, float raiseAmount) {
 ```
 
 -
--
-
-##Object Construction  
-* Objects are containers, the objects we use and create are composed of other objects.
-* As stated before, we are in an eternal struggle to avoid null objects.
-* Object-oriented programming is objects talking to other objects: if we send a message to an object that doesn’t exist, our programs will fail.
-
--
-###Constructors
-* This is where constructors come in.
-* We use constructors to control the creation of our objects
-* We can guarantee that objects are initialized correctly.
-* Make sure you are thoughtful about what "defaults" we'd like to see within our objects.
-
-
-
--
 ##Overloading Methods
 **Overloading** is when we have methods that have the
 
 * same name
-* return type
+* return the type
 * but take different parameters.
 
 ```
@@ -753,7 +803,7 @@ public Superman() {}
 
 ##Naming conventions
 
-* Life is already hard enough, let's not add complexity where there need not be any. Name things what they are. Sure, we all love the idea of naming every variable after our favorite 80s cartoon characters, but eventually we will forget what String panthro5000 is in reference to.
+* Life is already hard enough, let's not add complexity where there need not be any. Name things what they are. Sure, we all love the idea of naming every variable after our favorite 80s cartoon characters, but eventually we will forget what String panthero5000 is in reference too.
 
 -
 -
@@ -802,7 +852,7 @@ public class Superman( ){
 -
 ###Initialization Blocks
 
-* This is where **Initialization Blocks** come in, they are used to run a set of instructions when the **Class** is constructed, before any objects are ever created.
+* This is where Initialization Blocks come in, they are used to run a set of instructions when the Class is constructed, before any objects are ever created.
 
 ```
 public Superman ( ){
@@ -819,14 +869,14 @@ public Superman ( ){
 
 The static block is ONLY run once when the class is loaded for the first time in the JVM.
 
-The **System** package might do this for the **out** object, so that it's ready to be used right away.
+the **System** package might do this for the **out** object, so that it's ready to be used right away.
 
 -
 -
 
 ###Object Destruction and the finalize method
 
-* Once you break the connection between the reference which lives in the **stack**, and the instance which lives in the **heap**, there is no way to reconnect with that object. Even though it will not be removed until the next Garbage Collection Cycle, as far as you are concerned, it's gone.
+* Once you break the connection between the reference which lives in the stack, and the instance which lives in the heap, there is no way to reconnect with that object. Even though it will not be removed until the next Garbage Collection Cycle, as far as you are concerned, it's gone.
 
 -
 
@@ -859,3 +909,8 @@ import dc.action.comics.Superman;
 //or
 import dc.man.of.steel.Superman;
 ```
+
+-
+-
+
+#Live Demo

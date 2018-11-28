@@ -32,9 +32,9 @@ A commit is a change to the repository.  For every commit made, you have a recor
 ##Git Commands
 -
 * `git init`
-    * <span class="fragment fade-up">Creates a new local repository in the current directory.</span>
-    * <span class="fragment fade-up">This command will rarely be used during this course as most work being done will be collaborative and pre-existing assignments.</span>
-    * <span class="fragment fade-up">If you find yourself typing this command regularly, you're probably doing something wrong.</span>
+    * Creates a new local repository in the current directory.
+    * This command will rarely be used during this course as most work being done will be collaborative and pre-existing assignments.
+    * If you find yourself typing this command regularly, you're probably doing something wrong.
 
 -
 * `git clone {project}`
@@ -116,7 +116,7 @@ nothing to commit, working directory clean
 * They have most of the functionality built out, but they need you to implement the division function of the calculator.
 * So, you have some directory called `dev` where you do all your development work.
 * Your first step is:
-    * `git clone https://git.zipcode.rocks/ZipCodeWilmington/CR-Calcul8r.git`
+    * `git clone https://github.com/Zipcoder/Calcul8r.git`
 
 
 
@@ -140,9 +140,9 @@ Next, you run `git branch -a` to see exactly what branches exist on this compani
 
 
 -
-* So, from here, you can see that your new colleagues have made branches for
+* So, from here, you can see that your new collegues have made branches for
     * `add`, `subtract`, and `multiply`.
-* Because you're implementing **divide**, you should make a `divide` branch.
+* Because you're implementing divide, you should make a `divide` branch.
 * To do this, you run:
     * `git branch divide`
         * create a branch named `divide`
@@ -153,12 +153,12 @@ Next, you run `git branch -a` to see exactly what branches exist on this compani
 
 
 -
- Now you have a local branch, but you want to cover your bases and tell Github to start tracking a remote version of it.
- So, you run:
+* Now, you have a local branch, but you want to cover your bases and tell Github to start tracking a remote version of it.
+* So you run:
     * `git push -u origin divide`
 
 -
- Now, a `git branch -a` shows:
+* Now, a `git branch -a` shows:
 > 
   master<br/>
   \* divide
@@ -171,10 +171,10 @@ Next, you run `git branch -a` to see exactly what branches exist on this compani
   
   
 -
- Now you're ready to start developing.
-* Modify a file called `Operations` and add your **divide** function.
-* Also, modify `OperationsTest` and make unit tests for your new **divide** function.
-* To get everything up to the remote server, do the following:
+* Now you're ready to start developing.
+* You modify a file called `Operations` and add your divide function.
+* You also modify `OperationsTest` and make unit tests for your new divide function.
+* You're ready to get everything up on the remote server, so you run:
     * `git add .`
     * `git commit -m "Added divide function and unit tests"`
     * `git push`
@@ -210,13 +210,7 @@ Next, you run `git branch -a` to see exactly what branches exist on this compani
 * `git checkout master`
 * `git merge {branchname}`
 
--
-##A few More Useful commands
 
-* `git reset --hard` , to revert your local repository to the last committed version.<br>
-* `git remote -v` , to see the remote aliases attached to your local clone.<br>
-* `git remote add <aliasname> <repourl>` , to add a new repo alias.<br>
-* `git revert <commitId>`, to revert to a committed version by id.<br>
 
 
 -
@@ -226,9 +220,8 @@ Next, you run `git branch -a` to see exactly what branches exist on this compani
 
 
 -
- A merge conflict is what happens when you try to merge a changed file into another file that has been changed.
-
- Consider the following scenario:
+* A merge conflict is what happens when you try to merge a file over another file that have both been changed.
+* Consider this scenario:
 
 
 
@@ -238,9 +231,6 @@ Next, you run `git branch -a` to see exactly what branches exist on this compani
 * When you checkout master, the file you changed was in state A.
 * When Matt decided to make the change, his version was also in state A.
 * When Matt pushes his changes to master, the branch was in state
-
--
-
 * You make your changes on your branch, but before you can merge it into your up-to-date version of master, Matt pushed his change.
 * This means that the file is now in state B, and you're trying to put it in state B. You can't.
 * Plus, considering that keep keeps a running log of the state of a file, you now need to make your changes as if they came after Matt's change (since it keeps the order).
@@ -261,28 +251,19 @@ Some different changes
 ```
 
 -
-There are a various ways to handle a merge conflict.  The easiest one, however, is to use `git mergetool` and use a tool to handle it.  This is hard to describe doing because each machine might use a different tool.  So, suggested tips for merge conflicts are the following:
+There are a bunch of different ways to handle a merge conflict.  The easiest one, however, is to use `git mergetool` and use a tool to handle it.  This is hard to describe doing because each machine might use a different tool.  So, my tips for merge conflicts are these:
 
 -
-##Suggested Tips for Merge Conflicts:
-<p class="fragment fade-up">1. Commit early and commit often.  Your merge conflicts won't be all the large if you're constantly making small changes.</p>
-<p class="fragment fade-up">2. Try and not work on the same files as other people.</p>
-<p class="fragment fade-up">3. Be calm and Google things.  That's how most of us figured out how to fix merge conflicts.</p>
+1. Commit early and commit often.  Your merge conflicts won't be all the large if you're constantly making small changes.
+2. Try and not work on the same files as other people.
+3. Be calm and Google things.  That's how most of us figured out how to fix merge conflicts.
 
 -
 -
 ## Pull Requests
 
 -
-Since many repositories are protected, you'll need to submit a **PR** (pull request) to get your changes merged into them.  Think of it a a merge that someone has to approve. 
-
-To submit from a **fork** (your personal copy of a repo that you can make changed to), go to your git provider (such as Github, Bitbucket, or a proprietary git server) and submit a **PR** from its interface.
-
-A good practice is to get your **master** branch to your desired state, merge in the original project's changes, then submit your pull request. 
-
--
-
-Each provider handles pull requests differently, so follow the directions that apply to you. However, remember they're basically protected merges, so treat them as you'd treat merges.
+Since a lot of repositories are protected, to get your changes done in master you must submit a PR (pull request).  Think of these are merges that someone has to approve.  To do them from a fork (or your personal copy of a repo that you can do work on), go to your git provider (Github, Gitlab, or a proprietary git server) and submit a PR.  My adivce is to get your master branch to where you want it, merge in the original project's changes, and then submit the pull request.  Each place will be a little different with pull requests, so follow the directions that apply to you.  But, remember, they're basically just protected merges so treat them the way you treat merges.
 
 -
 -
@@ -305,11 +286,13 @@ https://www.github.com
 
 -
 ##Fork this repo
-https://git.zipcode.rocks/Cohort4.2/CR-Calcul8r.git
+https://github.com/zipcoder/calcul8r
 
 -
-##Open the project in BlueJ
+##Open the project in Eclipse
+* Set your workspace to the git directory
 * Open the project from the file system
+* Let maven work its magic
 * Show the dotfiles
 
 -
@@ -323,16 +306,3 @@ https://git.zipcode.rocks/Cohort4.2/CR-Calcul8r.git
 
 -
 ##We'll cover resolving merge conflicts later.
-
--
-## Please watch the following tutorials
-
-* Watch: [1.1 Meet Git](https://youtu.be/-XmpLT30Xl0)
-* Watch: [1.2 The three-fold model](https://youtu.be/pYwoIy97VBY)
-* Watch: [1.3 Being selective with Git](https://youtu.be/onaXtpgS0R0)
-
--
-<img src="/tcuk-slides-light/img/bunnies/rabbits-huddling-together.jpg" >
-
-
-

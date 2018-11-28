@@ -18,7 +18,7 @@ public class Instructor{
 	
 	public Instructor(){
 		rm = RosterManager.getInstance();
-		students = new Cohort(rm.getRoster("August 2018"));
+		students = new Cohort(rm.getRoster("April 2017"));
 	}
 	
 }
@@ -35,7 +35,7 @@ public class Instructor{
 	
 	public Instructor(RosterManager rm){
 		this.rm = rm;
-		students = new Cohort(rm.getRoster("August 2018"));
+		students = new Cohort(rm.getRoster("April 2017"));
 	}
 }
 ```

@@ -5,7 +5,7 @@ Java Persistence API
 -
 ## JPA Specification
 
-- Part of Java Enterprise Edition (EE) spec
+- Part of Java EE spec
 - Contained in the `javax.persistence` package
 - Implemented by many other libraries
 
@@ -31,7 +31,7 @@ Java Persistence API
 -
 ## Repositories
 
-- Spring's Data Access Objects (DAO)
+- Spring's DAO objects
 - The way to use your data
 - Part of spring framework
 - Used to provide JPA implementation
@@ -132,18 +132,11 @@ Specify custom queries
 - Serves as a hint for the Spring-generated implementation
 
 -
-Custom query examples:
+Custom query example
 
 ```Java
-@Query("SELECT c FROM Customer c WHERE c.emailAddress = ?1")
+@Query("select c from Customer c where c.emailAddress = ?1")
 Customer findByEmailAddress(EmailAddress email);
-```
-
-
-```Java
-@Query("SELECT c FROM Customer c WHERE c.status = :status AND c.name = :name")
-Customer findCustomerByCustomerStatusAndCustomerName(@Param("status") Integer customerStatus, 
-  @Param("name") String customerName);
 ```
 
 -

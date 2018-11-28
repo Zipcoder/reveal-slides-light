@@ -118,7 +118,7 @@ s = new String("Hello World");
 
 -
 -
-##5 places to store data
+#5 places to store data
 
 1. **Registers** - they exist inside the processor (very limited)
 2. **Stack** - RAM and the fastest but limited by needing to know the exact life time of allocated storage. Object References live here not objects.
@@ -164,9 +164,7 @@ int \\ Test results say Object is NOT the Father.
 -
 #Garbage Collection
 
-You never need to explicitly delete an object in JAVA. In fact it's almost impossible to do so, since you do not have direct access to memory. To remove an object from memory, you must remove every reference to that object.
-
-GC will remove any object that is not actively referenced. 
+You never need to explicitly delete an object in JAVA. In fact its almost impossible to do so, since you do not have direct access to memory. To remove an object from memory, you must remove every reference to that object. GC will remove any object that is not actively reference. 
 
 Once an object reference is broken, you have no access to that object again.
 

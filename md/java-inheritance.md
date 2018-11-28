@@ -50,7 +50,7 @@ public class Corgi extends Dog{
 }
 ```
 
-[Full example](https://repl.it/@dolio/Inheritance-Example-Corgi-3)
+[Full example](https://repl.it/FMrL/0)
 
 -
 ### Upcasting

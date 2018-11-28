@@ -60,8 +60,3 @@ str.getClass.equals(Object.class) //false
 ### Resources
 
 - [`Class` class documentation](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)
-
--
-
-<img src="/tcuk-slides-light/img/bunnies/pairbunnies.jpg" >
-

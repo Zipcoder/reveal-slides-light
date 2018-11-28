@@ -10,14 +10,14 @@ Java 1.0 was released at Sun World in Beautiful Las Vegas
 
 -
 -
-#Java is a Platform
+#Javas is a Platform
 
 Java is not just a language it is a platform which consists of: 
 
-<p class="fragment fade-up">Libraries</p>
-<p class="fragment fade-up">Reusable code</p>
-<p class="fragment fade-up">Provided services</p>
-<p class="fragment fade-up">Garbage collection</p>
+* Libraries 
+* Reusable code
+* Provided services
+* Garbage collection
 
 -
 -
@@ -29,7 +29,7 @@ The garbage collector is a program that runs on the Java Virtual Machine, which 
 -
 # A Low End Theory `1991`
 
-The original Java project was started in 1991 by Sun Micro Systems engineers Patrick Naughton and James Gosling (Father of Java)
+The original Java project was started in 1991 by Sun Micro Systems engineers Patrick Naughton and James Gosling ( Father of Java )
 
 -
 
@@ -145,14 +145,14 @@ Java runs inside of the HEAP, which is a memory sandbox- that allows Java to run
 
 #Java is Architecturally Neutral
 
-Java code is compiled and translated into byte code. This byte code is executed on the **JVM**. The **JVM** can run on any platform or operating system.
+Java code is compiled and translated into byte code. This byte code is executed on the **JVM**. The **JVM can run on any platform or operating system.
 
 -
 -
 
 #Java is portable
 
-Java is designed to run on a vast number of devices. Its specification standardized its data types to allow it to provide predictable functionality across devices.
+Java is designed to run on a vast number of devices. Its specification standardised its data types to allow it to provide predictable functionality across devices.
 
 -
 -
@@ -166,7 +166,7 @@ Java is not completly compiled to an executable. Java is a hybrid in the sense t
 
 #Java is High Performance
 
-Java uses a **just-in-time** (JIT) compiler. As your application is running, the interpreter can identify code that is used frequently and compile that down to machine-code to optimize and increase performance.
+Java uses a **just-in-time** compiler. As your application is running, the interpreter can identify code that is used frequently and compile that down to machine-code to optimize and increase performance.
 
 -
 -

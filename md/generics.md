@@ -2,10 +2,10 @@
 -
 -
 # Background
-* <span class="fragment fade-up">Introduced in SE5 to make it safer and easier than casting from Objects everywhere.</span>
-* <span class="fragment fade-up">You've used them already:</span>
-  * <span class="fragment fade-up">Lists</span>
-  * <span class="fragment fade-up">Maps</span>
+* Introduced in SE5 to make it safer and easier than casting from Objects everywhere.
+* You've used them already:
+  * Lists
+  * Maps
 -
 -
 ## Container without Generics
@@ -50,14 +50,11 @@ class Pair<T,U> {
   ...
 }
 ```
-
- Also, you can use the diamond operator to make code more readable.
-
+Also, you can use the diamond operator to make code more readable.
 ```Java
 Container<String> stringContainer = new Container<String>();
 Container<String> stringContainer = new Container<>();
 ```
-
 -
 -
 ### We can do methods, too.
@@ -66,13 +63,10 @@ class MiddleHelper {
   public static <T> T getMiddle(T... a) { return a[a.length /2 ]; }
 }
 ```
-
-**Note**: if you don't specify the type when you call the method, you can get into scenarios where the compiler doesn't understand what you're trying to do.
-
+Note, if you don't specify the type when you call the method, you can get into scenarios where the compiler doesn't understand what you're trying to do.
 ```Java
 double middle = ArrayAlg.getMiddle(3.14, 1729, 0)
 ```
-
 -
 -
 ## Bounds
@@ -80,13 +74,13 @@ double middle = ArrayAlg.getMiddle(3.14, 1729, 0)
 public static <T extends Comparable> T min(T[] a){...}
 ```
 
-* When `extending` T must always be a subtype of its bounding type.
-* **REMEMBER**: if B extends A, that does NOT mean that T&lt;B> extends T&lt;A>
+When `extending` T must always be a subtype of its bounding type.<br>
+REMEMBER: if B extends A, that does NOT mean that T&lt;B> extends T&lt;A>
 -
 -
 ## Wildcards
 
-**Unbounded Wildcards** are used when you **don't** care about the type.
+Unbounded Wildcards are used when you don't care about the type.
 
 ```Java
 public static boolean isEven(List<?> list) {
@@ -94,24 +88,17 @@ public static boolean isEven(List<?> list) {
 }
 ```
 
-**Bounded Wildcards**, however, let you care somewhat about the type:
-
-<span class="fragment fade-up">`? extends Something` is typically when you are reading from something generic.  Means any subclass of `Something`.</span>
-
-<span class="fragment fade-up">`? super Something` is typically when you are writing to something generic.  Means any superclass of `Something`.</span>
+Bounded Wildcards, however, let you care somewhat about the type
+`? extends Something` is typically when you are reading from something generic.  Means any subclass of `Something`.
+`? super Something` is typically when you are writing to something generic.  Means any superclass of `Something`.
 
 -
 -
-## Wildcards (continued)
-You can also capture wildcards by passing the variable to another function that doesn't have a wildcard.
-
-However, this is rarely used (or allowed), since the compiler needs to be certain that the wildcard represents a single type.
+You can also capture wildcards by passing the variable to another function that doesn't have a wildcard.  Though, this is rarely used (or allowed), since the compiler needs to be certain that the wildcard represents a single type.
 -
 -
 ## Type Erasure
-At compile time for generics, the **type parameters** are **erased** and replaced with their **upper bounds**.
-
-If there isn't one, then it replaces them with **Object**:
+At compile time for generics, the type parameters are erased and replaced with their upper bounds.  And, if there isn't one, then it replaces them with Object.
 ```Java
 class Box<T> {
   public T contents;
@@ -127,8 +114,7 @@ class Box {
 ```
 -
 -
-
-Likewise,
+and
 ```Java
 class Box<T extends Comparable> {
   public T contents;
@@ -145,20 +131,17 @@ class Box{
 Also, if `Box` extended multiple things, the compiler would merely make everything the first type, and then cast to the latter ones when necessary.
 -
 -
-## Generics:<br> Part 2
--
--
-
-
 ## Polymorphism and Bridge Methods
 Java synthesizes bridge methods for us so we can have generics and polymorphism.
 -
 -
-## Polymorphism and Bridge Methods (example)
 ```Java
 public class Node<T> {
+
     public T data;
+
     public Node(T data) { this.data = data; }
+
     public void setData(T data) {
         System.out.println("Node.setData");
         this.data = data;
@@ -166,6 +149,7 @@ public class Node<T> {
 }
 public class MyNode extends Node<Integer> {
     public MyNode(Integer data) { super(data); }
+
     public void setData(Integer data) {
         System.out.println("MyNode.setData");
         super.setData(data);
@@ -185,6 +169,7 @@ public class Node {
     }
 }
 public class MyNode extends Node {
+
     public MyNode(Integer data) { super(data); }
 	 //Does not override Node.setData() !!!
     public void setData(Integer data) {
@@ -195,9 +180,10 @@ public class MyNode extends Node {
 ```
 -
 -
-Compiler creates a new "Bridge method" to fix this problem:
+Compiler creates a new "Bridge method" to fix this problem
 ```Java
 class MyNode extends Node {
+
     // Bridge method generated by the compiler
     //
     public void setData(Object data) {
@@ -208,6 +194,7 @@ class MyNode extends Node {
         System.out.println("MyNode.setData");
         super.setData(data);
     }
+
     // ...
 }
 ```
@@ -216,7 +203,6 @@ class MyNode extends Node {
 # What CAN'T we do with Generics
 -
 -
-## What CAN'T we do with Generics
 * No primitive types
   * Use wrapper classes
 * No runtime type inquiry on inner types
@@ -224,29 +210,25 @@ class MyNode extends Node {
   * `Pair<String>` and `Pair<Integer>` are of equal classes as far as runtime checking is concerned.
 -
 -
-## What CAN'T we do with Generics (continued)
 * No Arrays of parameterized types
-  * Remember, the compiler will make these into **Objects** (or bounding type).  <br>You pretty much never want this.
-  * You can get around this with some wildcard magic.  (Strongly discouraged)
+  * Remember, the compiler will make these into Objects (or bounding type).  You pretty much always don't want this.
+  * You can get around this with some wildcard magic.  But, like, don't.
   * You can, however, use `@SafeVarargs` for varargs.
 -
 -
-## What CAN'T we do with Generics (continued)
-* No instantiating type variables:
+* No instantiating type variables
   * `new T()` doesn't work
   * Pass in a `Class<T>` and call `class.newInstance()`
   * Use a function with a constructor expression
   * Either way, if you're going to be instantiating a type variable, you're going to be using functions that take arguments instead of directly.
 -
 -
-## What CAN'T we do with Generics (continued)
 * No generic arrays
-  * Type erasure here will hurt you.  Casting from Objects or bounding types to the type you want probably isn't going to work in your favor.
+  * Type erasure here will hurt you.  Casting from Objects or bounding types to the type you want probably isn't gonna work in your favor.
   * Again, here's where you have a function that will take an array constructor expression, kind of like instantiating type variables.
   * Or, call `Array.newInstance`
 -
 -
-## What CAN'T we do with Generics (continued)
 * No using them as statics in generic classes.
   * You can use them in exception specs, though.
 * No throwing or catching them.
@@ -254,14 +236,4 @@ class MyNode extends Node {
 -
 -
 # Reflection
-You can, in fact, leverage reflection to find out about an Object's generic past.
-This is all at runtime, though.
-
-Basically, you can see what's happening and where Objects came from, but know that as far as the compiler is concerned, they don't really matter.
-
-It's as if they've functionally been erased, but there is still a record.
-
--
--
-<img src="img/bunnies/cute-rabbit-2.jpg" width="80%" style="margin:0 10%" >
-
+You can, in fact, leverage reflection to find out about an Object's generic past.  This is all at runtime, though.  So, in all reality, you can see what's happening and where Objects came from, but know that as far as the compiler is concerned, they don't really matter.  Like, they've functionally been erased, but there is still a record.
