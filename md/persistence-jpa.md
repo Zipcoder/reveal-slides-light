@@ -50,7 +50,7 @@ Java Persistence API
 Method names parsed and automatically implemented
 
 `<verb><subject?>By<predicate>()`  
-eg: `findCarByYear()` or `countDistictPersonByLastName()`  
+eg: `findCarByYear()` or `countDistinctPersonByLastName()`  
 
 
 -
@@ -144,7 +144,7 @@ Custom implementations (example to follow)
 
 - Create an interface to define the desired method(s)
 - Implement custom JPA method in `<RepositoryName>Impl`, implementing interface
-- Extend the same inteface in `<RepositoryName>`
+- Extend the same interface in `<RepositoryName>`
 
 -
 Custom JPA example
