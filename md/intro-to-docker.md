@@ -7,7 +7,7 @@
 ### Configuration
 
 -
-##In Terminal type : docker version
+##In Terminal: docker version
 ```
 zcw$ docker version Client:
 Version: 17.09.0-ce API version: 1.32
@@ -23,7 +23,7 @@ Built: Tue Sep 26 22:45:38 2017
 ```
 
 -
-##In Terminal type : docker info
+##In Terminal: docker info
 ```
 zcw$ docker info
 Containers: 9 Running: 0
@@ -37,7 +37,7 @@ Network: bridge host ipvlan macvlan null overlay
 ```
 
 -
-##In Terminal type : docker
+##In Terminal: docker
 ```
 zcw$ docker
 Management Commands:
@@ -52,9 +52,9 @@ Manage services Manage Docker stacks
 ```
 -
 -
-##In Terminal type : docker
+##In Terminal: docker
 
-```
+```Java
 zcw$ docker
 Commands: attach
 build commit cp create deploy diff events exec export history images
