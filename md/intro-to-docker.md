@@ -236,7 +236,7 @@ You can not remove a running container , you must either stop the container , or
 zcw$ docker container rm 838 -f
 ```
 -
-##  What happens in ‘docker container run’
+###  What happens in ‘docker container run’
 - Looks for the image locally in image cache , to see if it's there<br>
 - Then looks in remote image repository ( defaults to Docker Hub )<br>
 - Downloads the latest version (Nginx:latest by default)<br>
