@@ -82,7 +82,6 @@ Repositories provide indirect JPA access -- we can still directly access using `
 
 - @Entity
 - @ID
-- @PersistenceContext
 - `@OneToMany`, `@ManyToOne`, `@OneToOne`, `@ManyToMany`
 - [Full list](https://docs.oracle.com/javaee/7/api/index.html?javax/persistence/package-summary.html)
 
@@ -147,50 +146,8 @@ Custom implementations (example to follow)
 - Extend the same interface in `<RepositoryName>`
 
 -
-Custom JPA example
-
-```Java
-interface ClassicCarUpdater {
-  int updateClassics();
-}
-
-public class CarRepositoryImpl implements ClassicCarUpdater {
-  @PersistenceContext
-  private EntityManager em;
-
-  public int updateClassics() {
-    String update =
-      "UPDATE Cars car SET car.isClassic = true " +
-      "WHERE car.isClassic = false " +
-      "AND car.id IN (" +
-      "SELECT c from Cars c WHERE c.year < 1992)";
-    return em.createQuery(update).executeUpdate();
-  }
-}
-```
-
--
-Custom JPA example (repository)
-
-```Java
-public interface CarRepository extends
-        JPARepository<Car, Integer>,
-        ClassicCarUpdater {
-    ...
-    }
-```
-
--
 -
 Configuration hints:
 
 - Show hibernate generated queries with `spring.jpa.show-sql=true` in `application.properties`
-
--
-@PersistenceContext and @PersistenceUnit
-
-- @PersistenceUnit injects an EntityManagerFactory
-- @PersistenceContext injects an EntityManager
-
-
 
