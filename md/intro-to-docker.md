@@ -9,31 +9,49 @@
 -
 ##In Terminal: docker version
 ```
-zcw$ docker version Client:
-Version: 17.09.0-ce API version: 1.32
-Go version: go1.8.3 Git commit: afdb6d4
-Server:
-Built: OS/Arch:
-Tue Sep 26 22:40:09 2017 darwin/amd64
-Version:
-API version: 1.32 (minimum version 1.12) Go version: go1.8.3
-Git commit: afdb6d4
-Built: Tue Sep 26 22:45:38 2017
-17.09.0-ce
+zcw$ docker version
+Client: Docker Engine - Community
+ Version:           18.09.0
+ API version:       1.39
+ Go version:        go1.10.4
+ Git commit:        4d60db4
+ Built:             Wed Nov  7 00:47:43 2018
+ OS/Arch:           darwin/amd64
+ Experimental:      false
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          18.09.0
+  API version:      1.39 (minimum version 1.12)
+  Go version:       go1.10.4
+  Git commit:       4d60db4
+  Built:            Wed Nov  7 00:55:00 2018
+  OS/Arch:          linux/amd64
+  Experimental:     true
 ```
 
 -
 ##In Terminal: docker info
 ```
-zcw$ docker info
-Containers: 9 Running: 0
-Paused: 0 Stopped: 9 Images: 21
-Server Version: 17.09.0-ce Storage Driver: overlay2
-Backing Filesystem: extfs
-Supports d_type: true Logging Driver: json-file Cgroup Driver: cgroupfs
+zcw$  docker info
+Containers: 11
+ Running: 0
+ Paused: 0
+ Stopped: 11
+Images: 71
+Server Version: 18.09.0
+Storage Driver: overlay2
+ Backing Filesystem: extfs
+ Supports d_type: true
+ Native Overlay Diff: true
+Logging Driver: json-file
+Cgroup Driver: cgroupfs
 Plugins:
-Volume: local
-Network: bridge host ipvlan macvlan null overlay
+ Volume: local
+ Network: bridge host ipvlan macvlan null overlay
+ Log: awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog
+Swarm: inactive
+...
 ```
 
 -
@@ -41,14 +59,21 @@ Network: bridge host ipvlan macvlan null overlay
 ```
 zcw$ docker
 Management Commands:
-checkpoint Manage checkpoints
-config container image
-network node plugin secret service stack
-...
-Manage Docker configs Manage containers
-Manage images Manage networks
-Manage Swarm nodes Manage plugins Manage Docker secrets
-Manage services Manage Docker stacks
+  builder     Manage builds
+  checkpoint  Manage checkpoints
+  config      Manage Docker configs
+  container   Manage containers
+  image       Manage images
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
 ```
 -
 -
@@ -56,17 +81,56 @@ Manage services Manage Docker stacks
 
 ```Java
 zcw$ docker
-Commands: attach
-build commit cp create deploy diff events exec export history images
-Attach local standard input, output, and error streams to a running container Build an image from a Dockerfile
-Create a new image from a container's changes
-Copy files/folders between a container and the local filesystem
-Create a new container
-Deploy a new stack or update an existing stack
-Inspect changes to files or directories on a container's filesystem Get real time events from the server
-Run a command in a running container
-Export a container's filesystem as a tar archive Show the history of an image
-List images
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  deploy      Deploy a new stack or update an existing stack
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  ...
+```
+-
+-
+##In Terminal: docker
+
+```Java
+(continued from previous slide)
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
 ```
 -
 ##Docker command line structure
@@ -117,8 +181,9 @@ Then open up your browser of choice and go to http://localhost:80 (refresh your 
 ##Let’s start a new DETACHED container
 ```
 zcw$ docker container run --publish 80:80 --detach nginx b2096a61e9464c2a60bb702545e7d5d4466e0f1f06ea178431d9ff6aec4f8532
+```
 Then open up your browser of choice and go to http://localhost:80
-``` 
+ 
 -
 ##Lets list all of our containers
 ```
@@ -132,8 +197,9 @@ b2096a61e946 nginx "nginx -g 'daemon ..." About a minute ago Up About a minute 0
 zcw$ docker container stop b2
 CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES
 b2096a61e946 nginx "nginx -g 'daemon ..." About a minute ago Up About a minute 0.0.0.0:80->80/tcp suspicious_jones
+```
 To stop the container you only have to provide enough of the container id for it to be unique.
-``` 
+ 
 -
 ##Let’s list all of our containers
 ```
@@ -225,14 +291,18 @@ STATUS
 Up 6 minutes
 Exited (0) 11 minutes ago Exited (0) 14 minutes ago
 PORTS 0.0.0.0:80->80/tcp
-(Some docker commands can be chained together to do multiple actions)
 ```
+(Some docker commands can be chained together to do multiple actions)
+
 -
 ##  Let’s clean up : We have an error
 ```
 zcw$ docker container rm 838 b20 1d3
 Error response from daemon: You cannot remove a running container 83831fe7c024246e2ffb4f6caa0fdf7d7f35d5c632133b4d09908466d44e25cc.
+```
 You can not remove a running container , you must either stop the container , or use the -f flag to force the removal.
+
+```
 zcw$ docker container rm 838 -f
 ```
 -
