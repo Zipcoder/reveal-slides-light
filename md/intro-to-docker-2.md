@@ -18,18 +18,18 @@
  
 -
 ##Docker container inspect
-- docker container inspect mysql
+- `docker container inspect mysql`
 - This will return a JSON array of all the data involved in starting up the container
 
 -
 ##Docker container stats
-- docker container stats
+- `docker container stats`
 - This will give you a running play on the processes running in containers on
 your machine
 - This is not what you would use in production
 - It’s great for when you are working on your local machine
 - Getting a Shell inside Containers
-- docker container run -it
+- `docker container run -it`
 	- starts new containers interactively
 - `docker container exec -it`
 	- run additional command in existing container
@@ -132,7 +132,7 @@ containers can get out to the internet
 ###-p (--publish)
 - Publishing ports is always in HOST:CONTAINER format
 - RUN: `docker container run -p 80:80 --name webhost -d nginx`
-- RUN: docker container port webhost
+- RUN: `docker container port webhost`
 	- `80/tcp -> 0.0.0.0:80`
 
 -
@@ -145,8 +145,7 @@ containers can get out to the internet
 	- There is an edge firewall that blocks calls in and out
 	- Docker has a default bridge that maps to our local ethernet interface
 	- Using the `-p` on docker will allow external traffic into the docker virtual network
-	- Containers on the same network have access to each other, unless you use `-p` there will be
-no incoming calls. 
+	- Containers on the same network have access to each other, unless you use `-p` there will be no incoming calls. 
 
 -
 
@@ -187,7 +186,7 @@ container
 		- Bridge is the default network driver
 - Run : `docker network create --help`
 - Run : `docker container run -d --name new_nginx --network zcw_app_network nginx`
-- Run : docker network inspect zcw_app_network
+- Run : `docker network inspect zcw_app_network`
 
 -
 
@@ -204,7 +203,7 @@ network
 - Use different Linux distro containers to check curl cli tool versions
 - Use two different terminal windows to start bash in both centos:7 and
 ubuntu:14.04, using `-it`
-- Use the docker container `--rm options so you can save cleanup`
+- Use the docker container `--rm` options so you can save cleanup
 - Ensure curl is installed and on latest version for that distro
 	- ubuntu : `apt-get update` && `apt-get install curl`
 	- Centos : `yum update curl`
@@ -395,24 +394,24 @@ Commands:
 Download images: hub.docker.com (ie, nginx official)
 -
 ##docker search
-docker search [OPTIONS] TERM
+`docker search [OPTIONS] TERM`
 -
 ##docker pull
-docker pull [OPTIONS] NAME[:TAG|@DIGEST]
+`docker pull [OPTIONS] NAME[:TAG|@DIGEST]`
 -
 ##docker login
-docker login [OPTIONS] [SERVER]
+`docker login [OPTIONS] [SERVER]`
 -
 ##docker push
-docker push [OPTIONS] NAME[:TAG]
+`docker push [OPTIONS] NAME[:TAG]`
 -
 ##Image Cache
-docker image ls
-docker pull nginx
-docker pull nginx:1.11.9
+`docker image ls`
+`docker pull nginx`
+`docker pull nginx:1.11.9`
 (when testing, specify the version)
-docker history nginx:latest
-docker image inspect nginx
+`docker history nginx:latest`
+`docker image inspect nginx`
 -
 #Unit 2: Container Images
 ###Tagging

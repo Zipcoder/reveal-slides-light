@@ -384,9 +384,9 @@ PID USER TIME COMMAND
 
 -
 ##  Lab: Manage Multiple Containers (Part 4)
-- docs.docker.com and --help are your friends
-- Clean it all up with docker container stop and docker container rm
+- docs.docker.com and `--help` are your friends
+- Clean it all up with `docker container stop` and `docker container rm`
 (both can accept multiple names of ID’s)
-- Use docker container ls to ensure everything is correct before and after
+- Use `docker container ls` to ensure everything is correct before and after
 clean up
 
