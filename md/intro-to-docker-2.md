@@ -139,7 +139,7 @@ containers can get out to the internet
 ###Inspect --format
 - `docker container inspect --format '{{ .NetworkSettings.IPAddress }}' webhost`
 	- Will return the ip address of the container ‘172.17.0.3’
-- Run: ifconfig en0
+- Run: `ifconfig en0`
 	- Will return the ip address of local machine ‘10.0.0.92’
 	- Notice that the two machines are not on the same network
 	- There is an edge firewall that blocks calls in and out

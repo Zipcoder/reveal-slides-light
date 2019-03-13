@@ -97,7 +97,7 @@ Shortcuts for commonly used character classes
 - `\S` - non-whitespace characters aka `[^\s]` (`\\S` in Java Strings)
 - `\d` - any numeric digit aka `[0-9]` (`\\d` in Java)
 - `\D` - any non-digit aka `[^0-9]` (`\\D` in Java)
-- `\w` - a word character (`a-zA-Z_0-9`)
+- `\w` - a word character `[a-zA-Z_0-9]`
 - `\W` - a non-word character aka `[^\w]`
 
 
