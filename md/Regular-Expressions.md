@@ -1,5 +1,13 @@
 #Regular Expressions
 -
+
+## What we'll cover
+
+<p class="fragment fade-up">Regex basics</p>
+<p class="fragment fade-up">Pattern Matching</p>
+
+
+-
 ### Resources
 
 - [Regexr](https://regexr.com/3m8em)

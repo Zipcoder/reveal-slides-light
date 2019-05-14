@@ -1,6 +1,18 @@
 ## Streams
 -
 
+
+## What we'll cover
+
+<p class="fragment fade-up">What is a Stream?</p>
+<p class="fragment fade-up">Stream Creation</p>
+<p class="fragment fade-up">Method References</p>
+<p class="fragment fade-up">Transformations</p>
+<p class="fragment fade-up">Reductions</p>
+<p class="fragment fade-up">Collecting Results</p>
+<p class="fragment fade-up">Grouping and Partitioning</p>
+
+-
 ## What is a Stream?
 
 A stream is a sequence of objects that supports various methods which can be pipelined to produce the desired result

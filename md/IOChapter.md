@@ -2,6 +2,19 @@
 
 -
 -
+
+
+## What we'll cover
+
+<p class="fragment fade-up">Input Output Streams</p>
+<p class="fragment fade-up">Paths, Files, and Directories</p>
+<p class="fragment fade-up">Zip File Systems</p>
+<p class="fragment fade-up">URL connections</p>
+<p class="fragment fade-up">Serialization</p>
+
+
+-
+-
 ### Input/output streams
 
 - Input streams -- A source to read bytes

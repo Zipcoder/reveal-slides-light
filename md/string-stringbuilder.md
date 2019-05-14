@@ -2,6 +2,16 @@
 
 -
 -
+
+## What we'll cover
+
+<p class="fragment fade-up">String Basics</p>
+<p class="fragment fade-up">String Methods</p>
+<p class="fragment fade-up">String Formatting</p>
+<p class="fragment fade-up">Building Strings</p>
+
+-
+-
 ## What is a String?
 `String words = "apple is red"`
 

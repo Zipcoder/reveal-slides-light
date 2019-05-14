@@ -2,6 +2,19 @@
 
 -
 -
+
+
+## What we'll cover
+
+<p class="fragment fade-up">Creating Strings</p>
+<p class="fragment fade-up">String Characteristics</p>
+<p class="fragment fade-up">String from Objects</p>
+<p class="fragment fade-up">String Operations</p>
+<p class="fragment fade-up">Formatting Strings</p>
+
+
+-
+-
 ## Ways to create Strings
 
 -
