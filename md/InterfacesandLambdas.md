@@ -1,5 +1,20 @@
 ## 6.1 Interfaces
+
+-
+-
+
+## What we'll cover
+
+<p class="fragment fade-up">Properties</p>
+<p class="fragment fade-up">Interfaces and Abstract Classes</p>
+<p class="fragment fade-up">Static and Default Methods</p>
+<p class="fragment fade-up">Lambda Expressions</p>
+
+-
+-
+
 * **interface** - an interface is not a class but a set of requirements for the classes that want to conform to the interface.
+
 -
 
   * To create an interface you use the keyword `interface`

@@ -1,5 +1,14 @@
 #Introduction to Test Driven Development (TDD)
 
+-
+-
+
+## What we'll cover
+
+<p class="fragment fade-up">3 Laws of TDD</p>
+<p class="fragment fade-up">Clean Code And Clean Test</p>
+<p class="fragment fade-up">One Test One Case</p>
+<p class="fragment fade-up">F.I.R.S.T</p>
 
 -
 -

@@ -1,6 +1,14 @@
 # Lambdas
 
 -
+
+## What we'll cover
+
+<p class="fragment fade-up">What are they?</p>
+<p class="fragment fade-up">When to use</p>
+<p class="fragment fade-up">Syntax: Runnable, Consumer,  Biconsumer, Supplier, Function, Bifunction</p>
+
+-
 ## What is it?
 * Lambda expressions are used to perform computation based on function abstraction and application.
 * Lambda expressions denote _method-invokation deference_.

@@ -1,4 +1,18 @@
 # Introduction to Object-Oriented Programming
+
+-
+-
+## What we'll cover
+
+<p class="fragment fade-up">Objects</p>
+<p class="fragment fade-up">Classes</p>
+<p class="fragment fade-up">Encapsulation</p>
+<p class="fragment fade-up">Relationships between classes</p>
+<p class="fragment fade-up">Objects and Instance variables</p>
+<p class="fragment fade-up">Single responsibility</p>
+<p class="fragment fade-up">Private, Static, Final</p>
+<p class="fragment fade-up">Methods</p>
+<p class="fragment fade-up">Object Construction</p>
 -
 -
 

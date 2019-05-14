@@ -2,6 +2,17 @@
 
 -
 -
+## What we'll cover
+<p class="fragment fade-up">Data types</p>
+<p class="fragment fade-up">Variables</p>
+<p class="fragment fade-up">Operators</p>
+<p class="fragment fade-up">Control Flow</p>
+<p class="fragment fade-up">Input and Output</p>
+<p class="fragment fade-up">Arrays</p>
+
+
+-
+-
 
 ## A Simple Java Program
 
