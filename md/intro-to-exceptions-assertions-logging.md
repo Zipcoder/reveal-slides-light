@@ -1,4 +1,8 @@
 ###Exceptions, Assertions, Logging
+-
+-
+
+## What we'll cover
 <p class="fragment fade-up">1. Throwable Class</p>
 <p class="fragment fade-up">2. Basic Exception Handling</p>
 <p class="fragment fade-up">3. Better Exception Handling</p>

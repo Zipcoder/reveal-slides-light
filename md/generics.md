@@ -1,6 +1,21 @@
 # Generics
 -
 -
+
+
+## What we'll cover
+
+<p class="fragment fade-up">Background</p>
+<p class="fragment fade-up">Defining a generic class</p>
+<p class="fragment fade-up">Bounds</p>
+<p class="fragment fade-up">Wildcards</p>
+<p class="fragment fade-up">Type Erasure</p>
+<p class="fragment fade-up">Polymorphism and bridge methods</p>
+<p class="fragment fade-up">What can't we do?</p>
+
+
+-
+-
 # Background
 * Introduced in SE5 to make it safer and easier than casting from Objects everywhere.
 * You've used them already:

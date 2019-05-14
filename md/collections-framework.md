@@ -1,5 +1,17 @@
 # Collections Framework
 
+-
+-
+## What we'll cover
+
+<p class="fragment fade-up">The Collection Interface</p>
+<p class="fragment fade-up">Collections Vs Maps</p>
+<p class="fragment fade-up">List</p>
+<p class="fragment fade-up">Set</p>
+<p class="fragment fade-up">Queues, Dequeues, and Stacks</p>
+<p class="fragment fade-up">Maps</p>
+<p class="fragment fade-up">Iterators</p>
+
 
 -
 -

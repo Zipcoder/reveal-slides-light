@@ -2,6 +2,17 @@
 
 -
 -
+
+
+## What we'll cover
+
+<p class="fragment fade-up">Threads</p>
+<p class="fragment fade-up">Thread Implementation</p>
+<p class="fragment fade-up">Thread Interruption</p>
+<p class="fragment fade-up">Thread Synchronization</p>
+
+-
+-
 ## Threads
 * Allows tasks to run in parallel
 * Share data between each other

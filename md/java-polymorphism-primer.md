@@ -1,5 +1,15 @@
 ### Polymorphism
+-
+-
 
+
+## What we'll cover
+<p class="fragment fade-up">Polymorphism</p>
+<p class="fragment fade-up">Generics</p>
+<p class="fragment fade-up">Enumeration Classes (Enums)</p>
+<p class="fragment fade-up">Reflection</p>
+
+-
 -
 #### Liskov Substitution Principle
 
