@@ -1,6 +1,13 @@
 #Shell, etc.
 
 
+-
+-
+
+## What we'll cover
+
+<p class="fragment fade-up">Your Shell Terminal</p>
+<p class="fragment fade-up">Useful commands for navigating and manipulating your file system</p>
 
 -
 -

@@ -1,5 +1,12 @@
 #Introduction to Objects
 
+-
+-
+## What we'll cover
+<p class="fragment fade-up">Abstraction</p>
+<p class="fragment fade-up">5 Pillars of OOP</p>
+<p class="fragment fade-up">Objects</p>
+<p class="fragment fade-up">Classes</p>
 
 
 -
@@ -15,7 +22,7 @@ Earlier programming languages focused on abstracting the machine. What OOP striv
 It allows the programmer to represent elements in the **problem space** or **domain**.
 
 -
-# Abstration
+# Abstraction
 
 OOP allows you to express a problem in terms of the problem, and not on the computer where the problem will run.
 
