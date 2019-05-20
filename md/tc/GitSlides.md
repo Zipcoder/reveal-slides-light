@@ -289,7 +289,7 @@ https://www.github.com
 https://github.com/zipcoder/calcul8r
 
 -
-##Open the project in Eclipse
+##Open the project in BlueJ
 * Set your workspace to the git directory
 * Open the project from the file system
 * Let maven work its magic
