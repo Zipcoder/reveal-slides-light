@@ -616,7 +616,7 @@ export class AppRoutingModule { }
 
 ## appRoutes
 
-Our ``const`` ``appRoutes`` defines an array of routes. Each route is an object that contains data about that route, including it's path and the component it should route to.
+Our ``const`` ``appRoutes`` defines an array of routes. Each route is an object that contains data about that route, including its path and the component it should route to.
 
 ```javascript
 const appRoutes: Routes = [
